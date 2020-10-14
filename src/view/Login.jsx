@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
+import Logo from "../images/logo.png";
 
 
 const Login = () => {
 
   return (
-    <div className="col-sm-8 col-md-6 col-lg-4 col-xl-3">
+    <div className="container main">
       <div className="d-flex justify-content-center">
-        <img className="size-img mt-2" alt="Logo Yanbal" />
+        <img className="size-img mt-2" src={Logo} alt="Logo Yanbal" />
       </div>
       <form className="text-center">
         <input type="email" name="email" className="form-control my-3 bottom px-0" placeholder="Correo" required />
