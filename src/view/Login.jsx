@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../images/logo.png";
 import Vector from "../images/Vector.png";
 
 
+
 const Login = () => {
+
+ 
+  const [email,setEmail] = useState('');
+  const [password,setPassword] = useState('');
+
+  
+
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setEmail((prevState) => ({
+        ...prevState,
+        [name]: value,
+    }));
+console.log(email)
+};
+const handleChanged = (e) => {
+  e.preventDefault();
+  const { name, value } = e.target;
+  setPassword((prevState) => ({
+      ...prevState,
+      [name]: value,
+  }));
+console.log(password)
+};
 
   return (
     <div className="container main">
@@ -14,13 +41,13 @@ const Login = () => {
           </div>
           <br/>
           <form className="text-center">
-            <input type="email" name="email" className="form-control my-3 bottom px-0 " placeholder="Correo" required />
-            <input type="password" name="pass" className="form-control my-3 bottom px-0 " placeholder="Contraseña" required />
+            <input type="email"  className="form-control my-3 bottom px-0 " placeholder="Correo" required name="user" value={email.user} onChange={handleChange}/>
+            <input type="password" className="form-control my-3 bottom px-0 " placeholder="Contraseña" required name="user" value={password.user} onChange={handleChanged}/>
             <br/>
             <div>
               <p className="text-center">Guardar Contraseña</p>
             </div>
-            <button className="btn btn-primary login" type="submit">Ingresar</button>
+            <button className="btn btn-primary login"  type="submit">Ingresar</button>
             <br/>
           </form>
           <br/>
