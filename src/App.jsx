@@ -12,6 +12,8 @@ const App = () => (
       <Switch>
         <Route path="/" exact component={Login} />
       </Switch>
+     
+
     </HashRouter>
   </Router>
 );

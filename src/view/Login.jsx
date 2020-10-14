@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import Logo from "../images/logo.png";
 import Vector from "../images/Vector.png";
-
-
+import {addOrder}  from '../controller/firestore';
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
+  let history = useHistory();
 
- 
+  
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
 
-  
-
+  const send = () => {//shorthand
+    addOrder({
+      correo:email,
+      contraseña: password,
+      
+    })
+   
+}
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -47,7 +54,7 @@ console.log(password)
             <div>
               <p className="text-center">Guardar Contraseña</p>
             </div>
-            <button className="btn btn-primary login"  type="submit">Ingresar</button>
+            <button className="btn btn-primary login" onClick={send} type="submit">Ingresar</button>
             <br/>
           </form>
           <br/>
