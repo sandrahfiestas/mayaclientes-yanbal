@@ -1,0 +1,9 @@
+@import "./styleComponents/Globals";
+@import "./styleComponents/Header";
+@import "./styleComponents/Home";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
