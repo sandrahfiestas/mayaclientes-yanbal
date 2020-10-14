@@ -16,15 +16,13 @@ export class StepThree extends Component {
 
         return (
             <div className="form-container">
+                <div className="App">
                 <h1 className="mb-5">Agregar comentarios o información de cliente</h1>
-                <div className="form-group">
-                <textarea className="box" placeholder="Ingresa descripción" name="description" />
-                    <label htmlFor="email">Email</label>
-                    <input type="email" className="form-control" name="email" onChange={inputChange('email')} value={values.email} />
                 </div>
-        
-                <br />
-
+                <div className="form-group">
+                  <textarea className="box" placeholder="Ingresa descripción" name="description" onChange={inputChange('description')} value={values.descrption} />
+                </div>
+    
                 <div className="row">
                     <div className="col-6">
                         <button className="btn btn-danger" onClick={this.back}>Back</button>

@@ -70,12 +70,19 @@ export class CreateClient extends Component {
               );
           case 3:
               return (
-                  <StepThree
+                 <div>
+                   <Navbar expand="lg" variant="light" bg="light">
+                      <Container>
+                      <Navbar.Brand href="#"> Registro de Cliente</Navbar.Brand>
+                      </Container>
+                   </Navbar>
+                   <StepThree
                       nextStep={this.nextStep}
                       prevStep={this.prevStep}
                       inputChange={this.inputChange}
                       values={values}
                   />
+                 </div>
               );
           case 4:
               return (
