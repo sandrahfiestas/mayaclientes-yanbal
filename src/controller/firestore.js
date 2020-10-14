@@ -1,10 +1,11 @@
-import firebase from './firebaseConfig';
+/*import firebase from './firebaseConfig';
+
 
 // COLECCION EN FIRESTORE - ADD ORDER
 const collectionOrder = () => firebase.firestore().collection('Orders');
 
 // AGREGAR DOCS A LA COLECCION
-const addOrder = (order) => {
+export const addOrder = (order) => {
   collectionOrder().add(order)
     .then((docRef) => {
       console.log('Document written with ID: ', docRef.id);
@@ -13,7 +14,7 @@ const addOrder = (order) => {
       console.error('Error adding document: ', error);
     });
 };
-
+export const addOrderTry = (order) => firebase.firestore().collection('Orders').add(order)
 // LEER LOS DOCS DE LA COLECCION
 const getOrder = (orderState) => new Promise((resolve, reject) => {
   collectionOrder().where('state', '==', orderState).onSnapshot((query) => {
@@ -38,11 +39,11 @@ export default {
   addOrder,
   getOrder,
   updateOrderState,
-};
+};*/
 
-// import {firebase} from '../firebase'
+import firebase from './firebaseConfig'
 
-// export const addOrder = (order) => firebase.firestore().collection('Orders').add(order)
+export const addOrder = (order) => firebase.firestore().collection('Orders').add(order)
 
 // export  const getOrders =(callback) =>  firebase.firestore().collection('Orders')
 
