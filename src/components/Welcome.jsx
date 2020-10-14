@@ -12,7 +12,7 @@ function Welcome() {
   return (
     <div className="div-welcome">
       <h5 className="welcome-hi">¡Hola, ...!</h5>
-      <Link to="/register">
+      <Link to="/client">
         <button type="button" className="btn-options">
           <img src={book} className="icon-book" alt="icon-book" />
           <p className="txt-options">Agregar nuevos clientes</p>

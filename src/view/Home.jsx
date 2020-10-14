@@ -10,7 +10,7 @@ function Home() {
       <Welcome />
       <Footer />
     </>
-  )
+  );
 }
 
 export default Home;
