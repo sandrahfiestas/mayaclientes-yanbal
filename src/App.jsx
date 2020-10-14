@@ -5,7 +5,8 @@ import {
 import Login from './view/Login';
 import './sass/index.scss';
 
-const App = () => (
+ 
+const App = () => ( 
   <Router>
     <HashRouter>
       <Switch>
