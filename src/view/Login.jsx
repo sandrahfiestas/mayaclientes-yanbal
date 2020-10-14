@@ -1,34 +1,39 @@
 import React, { useState } from "react";
 import Logo from "../images/logo.png";
 import Vector from "../images/Vector.png";
+//import {addOrder}  from '../controller/firestore';
+import { useHistory } from "react-router-dom";
+import {useFirebaseApp} from 'reactfire';
+import 'firebase/auth';
 
 
 
 const Login = () => {
+  let history = useHistory();
 
- 
+  const firebase = useFirebaseApp()
+  //console.log(firebase)
+  
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
 
-  
-
+  const send = (e) => {
+    e.preventDefault()
+     firebase.auth().createUserWithEmailAndPassword(email,password).then(()=>{
+      history.push('/home')
+     })
+      console.log(email,password)
+     
+}
 
   const handleChange = (e) => {
     e.preventDefault();
-    const { name, value } = e.target;
-    setEmail((prevState) => ({
-        ...prevState,
-        [name]: value,
-    }));
+    setEmail(e.target.value)
 console.log(email)
 };
 const handleChanged = (e) => {
   e.preventDefault();
-  const { name, value } = e.target;
-  setPassword((prevState) => ({
-      ...prevState,
-      [name]: value,
-  }));
+  setPassword(e.target.value)
 console.log(password)
 };
 
@@ -41,13 +46,13 @@ console.log(password)
           </div>
           <br/>
           <form className="text-center">
-            <input type="email"  className="form-control my-3 bottom px-0 " placeholder="Correo" required name="user" value={email.user} onChange={handleChange}/>
-            <input type="password" className="form-control my-3 bottom px-0 " placeholder="Contraseña" required name="user" value={password.user} onChange={handleChanged}/>
+            <input type="email"  className="form-control my-3 bottom px-0 " placeholder="Correo" required   value={email}  onChange={handleChange}/>
+            <input type="password" className="form-control my-3 bottom px-0 " placeholder="Contraseña" required  value={password}  onChange={handleChanged}/>
             <br/>
             <div>
               <p className="text-center">Guardar Contraseña</p>
             </div>
-            <button className="btn btn-primary login"  type="submit">Ingresar</button>
+            <button className="btn btn-primary login" onClick={send} type="submit">Ingresar</button>
             <br/>
           </form>
           <br/>
