@@ -7,17 +7,14 @@ import Home from './view/Home';
 import CreateClient from './view/CreateClient';
 import './sass/index.scss';
 
- 
-const App = () => ( 
+const App = () => (
   <Router>
     <HashRouter>
       <Switch>
-        <Route path="/home"  component={Home} />
+        <Route path="/home" component={Home} />
         <Route path="/client" component={CreateClient} />
-        <Route path="/"   component={Login} />
+        <Route path="/" component={Login} />
       </Switch>
-     
-
     </HashRouter>
   </Router>
 );
