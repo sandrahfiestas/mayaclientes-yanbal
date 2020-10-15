@@ -56,7 +56,7 @@ export class CreateClient extends Component {
                             <p className="txt-navi">Registro de Cliente</p>
                           </div>
                           <div>
-                            <button className="btn-count"><p className="txt-count">1/4</p></button>
+                            <button className="btn-count"><p className="txt-count">1/5</p></button>
                           </div>
                         </div>
                       </Navbar.Brand>
@@ -83,7 +83,7 @@ export class CreateClient extends Component {
                             <p className="txt-navi">Registro de Cliente</p>
                           </div>
                           <div>
-                            <button className="btn-count"><p className="txt-count">2/4</p></button>
+                            <button className="btn-count"><p className="txt-count">2/5</p></button>
                           </div>
                         </div>
                       </Navbar.Brand>
@@ -111,7 +111,7 @@ export class CreateClient extends Component {
                             <p className="txt-navi">Registro de Cliente</p>
                           </div>
                           <div>
-                            <button className="btn-count"><p className="txt-count">3/4</p></button>
+                            <button className="btn-count"><p className="txt-count">3/5</p></button>
                           </div>
                         </div>
                       </Navbar.Brand>
@@ -127,8 +127,67 @@ export class CreateClient extends Component {
               );
           case 4:
               return (
-                  <Success />
+                <div>
+                <Navbar expand="lg" variant="light" className="nav-bar">
+                   <Container>
+                   <Navbar.Brand href="#">
+                   <div className="div-header-reg">
+                       <div>
+                         <img src={iconBack} className="icon-back" alt="icon-back" />
+                       </div>
+                       <div>
+                         <p className="txt-navi">Registro de Cliente</p>
+                       </div>
+                       <div>
+                         <button className="btn-count"><p className="txt-count">4/5</p></button>
+                       </div>
+                     </div>
+                   </Navbar.Brand>
+                   </Container>
+                </Navbar>
+                <StepThree
+                   nextStep={this.nextStep}
+                   prevStep={this.prevStep}
+                   inputChange={this.inputChange}
+                   values={values}
+               />
+              </div>
+      
               );
+
+              case 5:
+                return (
+                  <div>
+                  <Navbar expand="lg" variant="light" className="nav-bar">
+                     <Container>
+                     <Navbar.Brand href="#">
+                     <div className="div-header-reg">
+                         <div>
+                           <img src={iconBack} className="icon-back" alt="icon-back" />
+                         </div>
+                         <div>
+                           <p className="txt-navi">Registro de Cliente</p>
+                         </div>
+                         <div>
+                           <button className="btn-count"><p className="txt-count">5/5</p></button>
+                         </div>
+                       </div>
+                     </Navbar.Brand>
+                     </Container>
+                  </Navbar>
+                  <StepThree
+                     nextStep={this.nextStep}
+                     prevStep={this.prevStep}
+                     inputChange={this.inputChange}
+                     values={values}
+                 />
+                </div>
+        
+                );
+                case 6:
+                  return (
+                      <Success />
+                  );
       }
   }
 }
