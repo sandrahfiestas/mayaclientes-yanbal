@@ -6,43 +6,46 @@ import StepThree from '../components/StepThree';
 import StepFour from '../components/StepFour';
 import Success from '../components/Success';
 import iconBack from '../images/icon_back.png';
+import {addClient} from '../controller/firestore';
 
 export class CreateClient extends Component {
   constructor(props){
     super(props);
     this.state={
-    step: 1,
-    name: '',
-    email: '',
-    phone: '',
-    description: '',
+    client:{
+      step: 1,
+      name: '',
+      email: '',
+      phone: '',
+      description: '',
+    }
     };
   };
 
   nextStep = () => {
-      const { step } = this.state;
-      this.setState({ step: step + 1 });
+    const { client } = this.state;
+    client.step = client.step + 1;
+    this.setState({ client: {...client}});
   };
 
   prevStep = () => {
-      const { step } = this.state;
-      this.setState({ step: step - 1 });
+    const { client } = this.state;
+    client.step = client.step - 1;
+    this.setState({ client: {...client}});
   };
 
   inputChange = input => e => {
-      this.setState({
-          [input]: e.target.value
-      });
+    const { client } = this.state;
+    client[input]= e.target.value;
+    this.setState({ client: {...client}});  
   };
-//   componentDidMount() {
-//     this.loadData();
-//   }
+  addNewClient = (client) =>{
+    addClient(client);
+  }
   render() {
-      const { step } = this.state;
-      const { name, email, phone, description } = this.state;
-      const values = { name, email, phone, description  };
-
-      switch (step) {
+      const { client } = this.state;
+    
+      switch (client.step) {
           case 1:
               return (
                   <div className="">
@@ -66,7 +69,7 @@ export class CreateClient extends Component {
                     <StepOne
                       nextStep={this.nextStep}
                       inputChange={this.inputChange}
-                      values={values}
+                      client={client}
                   />
                   </div>
               );
@@ -94,7 +97,7 @@ export class CreateClient extends Component {
                       nextStep={this.nextStep}
                       prevStep={this.prevStep}
                       inputChange={this.inputChange}
-                      values={values}
+                      client={client}
                   />
                 </div>
               );
@@ -122,7 +125,8 @@ export class CreateClient extends Component {
                       nextStep={this.nextStep}
                       prevStep={this.prevStep}
                       inputChange={this.inputChange}
-                      values={values}
+                      client={client}
+                      addNewClient={this.addNewClient}
                   />
                  </div>
               );
