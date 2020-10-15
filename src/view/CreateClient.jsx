@@ -1,10 +1,7 @@
 import React, { Component }from 'react';
 import { Navbar, Container } from 'react-bootstrap';
-import StepOne from '../components/StepOne';
-import StepTwo from '../components/StepTwo';
-import StepThree from '../components/StepThree';
-import Success from '../components/Success';
-import {addClient} from '../controller/firestore';
+import FormClient from '../components/FormClient';
+import {addClient, getProducts } from '../controller/firestore';
 
 export class CreateClient extends Component {
   constructor(props){
@@ -40,91 +37,25 @@ export class CreateClient extends Component {
   addNewClient = (client) =>{
     addClient(client);
   }
+ 
   render() {
       const { client } = this.state;
-    
-      switch (client.step) {
-          case 1:
-              return (
-                  <div className="">
-                    <Navbar expand="lg" variant="light" bg="light">
-                      <Container>
-                      <Navbar.Brand href="#"> Registro de Cliente</Navbar.Brand>
-                      </Container>
-                    </Navbar>
-                    <StepOne
-                      nextStep={this.nextStep}
-                      inputChange={this.inputChange}
-                      client={client}
-                  />
-                  </div>
-              );
-          case 2:
-              return (
-                <div>
-                   <Navbar expand="lg" variant="light" bg="light">
-                      <Container>
-                      <Navbar.Brand href="#"> Registro de Cliente</Navbar.Brand>
-                      </Container>
-                   </Navbar>
-                    <StepTwo
-                      nextStep={this.nextStep}
-                      prevStep={this.prevStep}
-                      inputChange={this.inputChange}
-                      client={client}
-                  />
-                </div>
-              );
-          case 3:
-              return (
-                 <div>
-                   <Navbar expand="lg" variant="light" bg="light">
-                      <Container>
-                      <Navbar.Brand href="#"> Registro de Cliente</Navbar.Brand>
-                      </Container>
-                   </Navbar>
-                   <StepThree
-                      nextStep={this.nextStep}
-                      prevStep={this.prevStep}
-                      inputChange={this.inputChange}
-                      client={client}
-                      addNewClient={this.addNewClient}
-                  />
-                 </div>
-              );
-          case 4:
-              return (
-                  <Success />
-              );
-      }
+    return (
+        <div className="">
+          <Navbar expand="lg" variant="light" bg="light">
+            <Container>
+            <Navbar.Brand href="#"> Registro de Cliente</Navbar.Brand>
+            </Container>
+          </Navbar>
+          <FormClient
+            nextStep={this.nextStep}
+            inputChange={this.inputChange}
+            client={client}
+            addNewClient={this.addNewClient}
+        />
+        </div>
+    );
   }
 }
 
 export default CreateClient;
-
-// const defaultData = {
-//   name: '',
-//   email: '',
-//   phone: '',
-//   description: '',
-//   };
-// const steps = [
-// { id: "names" },
-// { id: "address" },
-// { id: "contact" },
-// ];
-
-// const CreateClient = () => {
-//   const [formData, setformData] = useState(defaultData);
-//   const { step, setstep} = useState({
-//     steps,
-//     initialStep: 0,
-//   });
-
-
-//   return (
-//    <div className= 
-    
-//   );
-// };
-// export default CreateClient;

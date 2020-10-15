@@ -26,18 +26,17 @@ export const addProducts = (product) => {
     });
 };
 
-// // export const addOrderTry = (order) => firebase.firestore().collection('Orders').add(order)
-// // LEER LOS DOCS DE LA COLECCION
-// const getOrder = (orderState) => new Promise((resolve, reject) => {
-//   collectionOrder().where('state', '==', orderState).onSnapshot((query) => {
-//     const docs = [];
-//     query.forEach((order) => {
-//       docs.push({ ...order.data(), id: order.id });
-//     });
-//     // console.log(docs);
-//     resolve(docs);
-//   });
-// });
+// LEER LOS DOCS DE LA COLECCION
+const getProducts = () => new Promise((resolve, reject) => {
+  collectionProducts().onSnapshot((query) => {
+    const docs = [];
+    query.forEach((product) => {
+      docs.push({ ...product.data(), id: product.id });
+    });
+    // console.log(docs);
+    resolve(docs);
+  });
+});
 
 // const updateOrderState = (id, status) => {
 //   const deliveredDate = new Date().toISOString();
@@ -50,6 +49,7 @@ export const addProducts = (product) => {
 export default {
   addClient,
   addProducts,
+  getProducts,
 
   // getOrder,
   // updateOrderState,
