@@ -12,7 +12,7 @@ export class StepTwo extends Component {
     };
 
     render() {
-        const { values, inputChange } = this.props;
+        const { client, inputChange } = this.props;
 
         return (
             <div className="form-container">
@@ -21,11 +21,11 @@ export class StepTwo extends Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">Email</label>
-                    <input type="email" className="form-control" name="email" onChange={inputChange('email')} value={values.email} />
+                    <input type="email" className="form-control" name="email" onChange={inputChange('email')} value={client.email} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="phone">Phone Number</label>
-                    <input type="number" className="form-control" name="phone" onChange={inputChange('phone')} value={values.phone} />
+                    <input type="number" className="form-control" name="phone" onChange={inputChange('phone')} value={client.phone} />
                 </div>
                 <div className="row">
                     <div className="col-6">
