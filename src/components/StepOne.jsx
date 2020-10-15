@@ -5,11 +5,10 @@ export class StepOne extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
-        
     };
 
     render() {
-        const { values, inputChange } = this.props;
+        const { client, inputChange } = this.props;
 
         return (
             <div className="form-container">
@@ -18,7 +17,7 @@ export class StepOne extends Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
-                    <input type="text" className="form-control" name="name" onChange={inputChange('name')} value={values.name} />
+                    <input type="text" className="form-control" name="name" onChange={inputChange('name')} value={client.name} />
                 </div>
 
                 <br />
