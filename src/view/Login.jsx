@@ -5,8 +5,6 @@ import Vector from "../images/Vector.png";
 import { useHistory } from "react-router-dom";
 import firebase from '../controller/firebaseConfig';
 
-
-
 const Login = () => {
   let history = useHistory();
 
