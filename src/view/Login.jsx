@@ -44,7 +44,7 @@ console.log(password)
             <input type="password" className="form-control my-3 bottom px-0 " placeholder="Contraseña" required  value={password}  onChange={handleChanged}/>
             <br/>
             <div>
-              <p className="text-center">Guardar Contraseña</p>
+              <p><input className="form-check-input" type="checkbox" value=""/>Guardar Contraseña</p>
             </div>
             <button className="btn btn-primary login" onClick={send} type="submit">Ingresar</button>
             <br/>
