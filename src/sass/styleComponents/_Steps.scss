@@ -11,7 +11,13 @@
     background: $primary-color;
     line-height:0
   }
-  
+  .color{
+    color:$white;
+  }
+  .box{
+    width: 15em;
+    text-align: center;
+  }
   .txt-info-register {
     margin-top: 3em;
     color: $text-color;

@@ -16,7 +16,7 @@ export class StepOne extends Component {
                   <h1 className="mb-5">¿Cómo se llama tu cliente?</h1>
                 </div>
                 <div className="form-group form-register">
-                    <input type="text" className="form-control input-register" placeholder="nombres" name="name" onChange={inputChange('name')} value={values.name} />
+                    <input type="text" className="form-control input-register" placeholder="nombres" name="name" onChange={inputChange('name')} value={client.name} />
                     <input type="text" className="form-control input-register" placeholder="apellidos" name="lastName" />
 
         

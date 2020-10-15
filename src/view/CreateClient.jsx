@@ -2,7 +2,7 @@ import React, { Component }from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import StepOne from '../components/StepOne';
 import StepTwo from '../components/StepTwo';
-import StepThree from '../components/StepThree';
+import StepThree from '../components/StepThreeI';
 import StepFour from '../components/StepFour';
 import Success from '../components/Success';
 import iconBack from '../images/icon_back.png';
@@ -154,7 +154,7 @@ export class CreateClient extends Component {
                    nextStep={this.nextStep}
                    prevStep={this.prevStep}
                    inputChange={this.inputChange}
-                   values={values}
+                  
                />
               </div>
       
