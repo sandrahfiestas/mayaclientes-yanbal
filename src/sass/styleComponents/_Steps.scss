@@ -48,18 +48,28 @@
     font-size: 1.2em;
   }
 
-  .btn-next {
-    width: 190px;
+  .div-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-form {
+    width: 160px;
     height: 57px;
-    margin-left: 9.5em;
     background-color: $white;
     border: 1px solid $primary-color;
     display: flex;
     align-items: center;
     justify-content: space-around;
-  
-
   }
+
+
 
   .txt-btn-form {
     color: $black;
