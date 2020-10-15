@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
 
-export class StepThree extends Component {
-    continue = e => {
-        e.preventDefault();
-        this.props.nextStep();
-    };
+// export class StepThree extends Component {
+//     continue = e => {
+//         e.preventDefault();
+//         this.props.nextStep();
+//     };
 
-    back = e => {
-        e.preventDefault();
-        this.props.prevStep();
-    };
+//     back = e => {
+//         e.preventDefault();
+//         this.props.prevStep();
+//     };
 
     render() {
         const { client, inputChange, addNewClient } = this.props;
@@ -36,4 +36,5 @@ export class StepThree extends Component {
     }
 }
 
-export default StepThree;
+
+// export default StepThree;
