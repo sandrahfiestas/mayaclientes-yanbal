@@ -5,19 +5,22 @@ import {
 import Login from './view/Login';
 import Home from './view/Home';
 import CreateClient from './view/CreateClient';
+import Calendar from './components/date/Calendar';
+import CreateOrder from './view/CreateOrder';
+import AppOrder from './view/AppOrder';
 import './sass/index.scss';
 
- 
-const App = () => ( 
+const App = () => (
   <Router>
     <HashRouter>
       <Switch>
-        <Route path="/home"  component={Home} />
+      <Route path="/appOrder" component={AppOrder}/>
+        <Route path="/createOrder" component={CreateOrder}/>
+        <Route path="/calendar" component={Calendar}/>
+        <Route path="/home" component={Home} />
         <Route path="/client" component={CreateClient} />
-        <Route path="/"   component={Login} />
+        <Route path="/" component={Login} />
       </Switch>
-     
-
     </HashRouter>
   </Router>
 );

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+/*import React, { Component } from 'react'
 
 export class StepThree extends Component {
     continue = e => {
@@ -11,7 +11,7 @@ export class StepThree extends Component {
         this.props.prevStep();
     };
 
-    render() {
+    /*render() {
         const { client, inputChange, addNewClient } = this.props;
 
         return (
@@ -36,4 +36,4 @@ export class StepThree extends Component {
     }
 }
 
-export default StepThree;
+export default StepThree;*/
