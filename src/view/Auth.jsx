@@ -1,8 +1,7 @@
-import React, { Component }from 'react';
-import 'firebase/auth';
-import {useFirebaseApp} from 'reactfire';
+// import React, { Component }from 'react';
+// import 'firebase/auth';
 
-const Login = () => {
+// const Login = () => {
 
-}
-export default Login;
+// }
+// export default Login;

@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
+
 export class StepOne extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
+        
     };
 
     render() {
@@ -22,7 +24,7 @@ export class StepOne extends Component {
                 <br />
 
                 <div className="text-right">
-                    <button className="btn btn-primary" onClick={this.continue}>Continue</button>
+                    <button className="btn btn-primary" onClick={this.continue}>Siguiete</button>
                 </div>
             </div>
         )

@@ -29,10 +29,10 @@ export class StepTwo extends Component {
                 </div>
                 <div className="row">
                     <div className="col-6">
-                        <button className="btn btn-danger" onClick={this.back}>Back</button>
+                        <button className="btn btn-danger" onClick={this.back}>Volver</button>
                     </div>
                     <div className="col-6 text-right">
-                        <button className="btn btn-primary" onClick={this.continue}>Continue</button>
+                        <button className="btn btn-primary" onClick={this.continue}>Siguiete</button>
                     </div>
                 </div>
             </div>
