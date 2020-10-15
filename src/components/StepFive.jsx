@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import btnBack from '../images/btn_back.png';
 import btnNext from '../images/btn_next.png';
 
-export class StepFour extends Component {
+export class StepFive extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
@@ -20,10 +20,10 @@ export class StepFour extends Component {
             <div className="form-container">
                 <div className="App">
                 <p className="txt-info-register">Agrega su fecha de nacimiento y te recordaremos saludarlos en su cumpleaños, con ideas para llevarles algún obsequio.</p>
-                <h1 className="mb-5">¿Qué día cumpleaños tu cliente?</h1>
+                <h1 className="mb-5">Agregar comentarios o información del cliente</h1>
                 </div>
                 <div className="form-group form-register">
-                  <p>Calendario</p>
+								<input className="form-control box-des" type="text" placeholder ="Aquí puedes describir mejor a tu cliente" readonly/>
                 </div>
     
                 <div className="div-btn btn-dorwn">
@@ -40,10 +40,9 @@ export class StepFour extends Component {
                         </button>
                     </div>
                 </div>
-
             </div>
         )
     }
 }
 
-export default StepFour;
+export default StepFive;
