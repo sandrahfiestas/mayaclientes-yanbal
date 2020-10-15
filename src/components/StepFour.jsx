@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import btnBack from '../images/btn_back.png';
 import btnNext from '../images/btn_next.png';
 
-export class StepThree extends Component {
+export class StepFour extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
@@ -46,4 +46,4 @@ export class StepThree extends Component {
     }
 }
 
-export default StepThree;
+export default StepFour;
