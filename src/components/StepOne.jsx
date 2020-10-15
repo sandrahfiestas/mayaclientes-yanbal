@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
 
 
 export class StepOne extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
-        
     };
-
     render() {
         const { values, inputChange } = this.props;
 
@@ -30,5 +29,4 @@ export class StepOne extends Component {
         )
     }
 }
-
 export default StepOne;
