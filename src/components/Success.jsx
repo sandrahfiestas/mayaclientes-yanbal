@@ -13,7 +13,7 @@ export class Success extends Component {
                         </button>
                     </div>
                     <div className="modal-body">
-                        <p>Modal body text goes here.</p>
+                        <p>estoy aq.</p>
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-primary">Save changes</button>

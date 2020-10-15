@@ -122,7 +122,7 @@ export class CreateClient extends Component {
                 </Navbar.Brand>
               </Container>
             </Navbar>
-            <StepThreeI
+            <StepThree
               nextStep={this.nextStep}
               prevStep={this.prevStep}
               inputChange={this.inputChange}
