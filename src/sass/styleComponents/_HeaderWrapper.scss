@@ -1,0 +1,24 @@
+
+$primary-color: #DC582A;
+$gray:#BDBDBD;
+$white:#ffff;
+.view{
+    height: 632px;
+}
+.barra{
+    height:120px;
+    background: $primary-color;
+}
+.bar{
+    border: 1px solido $gray;
+}
+.card-title{
+    color: $white;
+    padding: 30px;
+}
+.icon{
+    margin: 0px  240px
+}
+.next{
+    border: 1px solido $primary-color;
+}

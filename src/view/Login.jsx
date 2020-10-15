@@ -17,7 +17,6 @@ const Login = () => {
       history.push('/home')
      })
       console.log(email,password)
-     
 }
 
   const handleChange = (e) => {

@@ -13,7 +13,7 @@ export class StepOne extends Component {
         return (
             <div className="form-container">
                 <div className="App">
-                  <h1 className="mb-5">¿Cómo se llama tu clientx?</h1>
+                  <h1 className="mb-5">¿Cómo se llama tu cliente?</h1>
                 </div>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
@@ -23,7 +23,7 @@ export class StepOne extends Component {
                 <br />
 
                 <div className="text-right">
-                    <button className="btn btn-primary" onClick={this.continue}>Siguiete</button>
+                    <button className="btn btn-primary" onClick={this.continue}>Siguiente</button>
                 </div>
             </div>
         )
