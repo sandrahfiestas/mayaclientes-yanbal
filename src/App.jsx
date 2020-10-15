@@ -7,7 +7,7 @@ import Home from './view/Home';
 import CreateClient from './view/CreateClient';
 import Calendar from './components/date/Calendar';
 import CreateOrder from './view/CreateOrder';
-import AppOrder from './view/AppOrder';
+import AddOrder from './view/AddOrder';
 import './sass/index.scss';
 
 const App = () => (

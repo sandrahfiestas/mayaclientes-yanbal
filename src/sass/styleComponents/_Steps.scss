@@ -18,6 +18,10 @@
     width: 15em;
     text-align: center;
   }
+  .txt-subtitle {
+    text-align: center;
+  }
+
   .txt-info-register {
     margin-top: 3em;
     color: $text-color;
@@ -75,6 +79,15 @@
     justify-content: space-around;
   }
 
+  .btn-preference {
+    width: 150px;
+    height: 40px;
+    background-color: $white;
+    border: 1px solid $primary-color;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+  }
 
 
   .txt-btn-form {
@@ -87,8 +100,20 @@
     width: 0.9em;
   }
 
+  .div-preferences {
+    height: 20vh;
+    width: 100%;
+  }
+
+  .preference {
+    padding-left: 2em;
+    width: 350px;
+    margin:0.5em
+  }
+
   .box-des{
     height: 100px;
     text-align: center;
 
   }
+

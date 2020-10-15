@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import StepOne from '../components/StepOne';
 import StepTwo from '../components/StepTwo';
-import StepThreeI from '../components/StepThreeI';
+import StepThree from '../components/StepThree';
 import StepFour from '../components/StepFour';
 import StepFive from '../components/StepFive';
 import Success from '../components/Success';
