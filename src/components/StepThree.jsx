@@ -11,7 +11,7 @@
 //         this.props.prevStep();
 //     };
 
-    render() {
+    /*render() {
         const { client, inputChange, addNewClient } = this.props;
 
         return (
@@ -37,4 +37,4 @@
 }
 
 
-// export default StepThree;
+// export default StepThree;*/

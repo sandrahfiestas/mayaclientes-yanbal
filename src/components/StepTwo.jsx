@@ -24,8 +24,8 @@ export class StepTwo extends Component {
                 </div>
 
                 <div className="form-group form-register">
-                    <input type="email" className="form-control input-register" placeholder="correo electrónico" name="email" onChange={inputChange('email')} value={values.email} />
-                    <input type="number" className="form-control input-register" placeholder="telefono" name="phone" onChange={inputChange('phone')} value={values.phone} />
+                    <input type="email" className="form-control input-register" placeholder="correo electrónico" name="email" onChange={inputChange('email')} value={client.email} />
+                    <input type="number" className="form-control input-register" placeholder="telefono" name="phone" onChange={inputChange('phone')} value={client.phone} />
                 </div>
                 <div className="div-btn btn-dorwn">
                     <div className="">

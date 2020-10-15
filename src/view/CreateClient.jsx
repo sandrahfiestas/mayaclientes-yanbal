@@ -153,13 +153,13 @@ export class CreateClient extends Component {
                    nextStep={this.nextStep}
                    prevStep={this.prevStep}
                    inputChange={this.inputChange}
-                   values={values}
+                  
                />
               </div>
       
               );
 
-              case 5:
+              /*case 5:
                 return (
                   <div>
                   <Navbar expand="lg" variant="light" className="nav-bar">
@@ -191,7 +191,7 @@ export class CreateClient extends Component {
                 case 6:
                   return (
                       <Success />
-                  );
+                  );*/
       }
   }
 }
