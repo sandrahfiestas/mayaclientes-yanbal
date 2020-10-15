@@ -7,12 +7,15 @@ import Success from '../components/Success';
 
 
 export class CreateClient extends Component {
-  state = {
-      step: 1,
-      name: '',
-      email: '',
-      phone: '',
-      description: '',
+  constructor(props){
+    super(props);
+    this.state={
+    step: 1,
+    name: '',
+    email: '',
+    phone: '',
+    description: '',
+    };
   };
 
   nextStep = () => {
@@ -30,7 +33,9 @@ export class CreateClient extends Component {
           [input]: e.target.value
       });
   };
-
+//   componentDidMount() {
+//     this.loadData();
+//   }
   render() {
       const { step } = this.state;
       const { name, email, phone, description } = this.state;

@@ -10,8 +10,6 @@ import firebase from '../controller/firebaseConfig';
 const Login = () => {
   let history = useHistory();
 
- 
-  
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
 
