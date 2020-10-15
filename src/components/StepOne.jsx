@@ -7,7 +7,7 @@ export class StepOne extends Component {
         this.props.nextStep();
     };
     render() {
-        const { values, inputChange } = this.props;
+        const { client, inputChange } = this.props;
 
         return (
             <div className="form-container">
@@ -18,6 +18,8 @@ export class StepOne extends Component {
                 <div className="form-group form-register">
                     <input type="text" className="form-control input-register" placeholder="nombres" name="name" onChange={inputChange('name')} value={values.name} />
                     <input type="text" className="form-control input-register" placeholder="apellidos" name="lastName" />
+
+        
                 </div>
                 <br />
                 <div className="div-btn">
@@ -25,6 +27,7 @@ export class StepOne extends Component {
                     <p className="txt-btn-form">Siguiete</p>
                     <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
                     </button>
+
                 </div>
             </div>
 

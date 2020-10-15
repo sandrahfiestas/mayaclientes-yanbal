@@ -14,7 +14,7 @@ export class StepTwo extends Component {
     };
 
     render() {
-        const { values, inputChange } = this.props;
+        const { client, inputChange } = this.props;
 
         return (
             <div className="form-container">
@@ -22,6 +22,7 @@ export class StepTwo extends Component {
                 <p className="txt-info-register">Al ingresar su correo y su teléfono podrás contactarlos rápidamente para ofrecerle productos y recordarle sus fechas de pago.</p>
                   <h1 className="mb-5">Datos de contacto</h1>
                 </div>
+
                 <div className="form-group form-register">
                     <input type="email" className="form-control input-register" placeholder="correo electrónico" name="email" onChange={inputChange('email')} value={values.email} />
                     <input type="number" className="form-control input-register" placeholder="telefono" name="phone" onChange={inputChange('phone')} value={values.phone} />
@@ -32,6 +33,8 @@ export class StepTwo extends Component {
                             <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
                             <p className="txt-btn-form">Volver</p>
                         </button>
+
+
                     </div>
                     <div className="">
                         <button className="btn btn-primary btn-form" onClick={this.continue}>

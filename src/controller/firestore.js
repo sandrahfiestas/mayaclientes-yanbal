@@ -1,12 +1,13 @@
 import firebase from './firebaseConfig';
 
 // COLECCION EN FIRESTORE - ADD ORDER
-const collectionOrder = () => firebase.firestore().collection('Clients');
+const collectionClients = () => firebase.firestore().collection('Clients');
 const collectionProducts = () => firebase.firestore().collection('Products');
 
 // AGREGAR DOCS A LA COLECCION
-export const addClient = (order) => {
-  collectionOrder().add(order)
+export const addClient = (client) => {
+  console.log(client);
+  collectionClients().add(client)
     .then((docRef) => {
       console.log('Document written with ID: ', docRef.id);
     })
@@ -14,6 +15,7 @@ export const addClient = (order) => {
       console.error('Error adding document: ', error);
     });
 };
+
 export const addProducts = (product) => {
   collectionProducts().add(product)
     .then((docRef) => {
