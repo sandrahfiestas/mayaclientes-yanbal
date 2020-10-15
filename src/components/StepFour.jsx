@@ -19,11 +19,21 @@ export class StepFour extends Component {
         return (
             <div className="form-container">
                 <div className="App">
-                <p className="txt-info-register">Agrega su fecha de nacimiento y te recordaremos saludarlos en su cumpleaños, con ideas para llevarles algún obsequio.</p>
-                <h1 className="mb-5">¿Qué día cumple años tu cliente?</h1>
+                <p className="txt-info-register">Elige las preferencias y necesidades de tu cliente y te daremos promociones y sugerencias para ofrecerle nuevos productos.</p>
+                <h1 className="mb-5 txt-subtitle">¿Qué tipo de productos prefiere <br></br> tu cliente?</h1>
                 </div>
-                <div className="form-group form-register">
-                  <p>Calendario</p>
+                <div className="form-group form-register div-preferences">
+                  {/* <div className="div-preferences"> */}
+                      <div className="preference">
+                          <button className="btn-preference">Cuidado personal</button>
+                          <button className="btn-preference">Hidratantes</button>
+                          <button className="btn-preference">Maquillaje</button>
+                          <button className="btn-preference">Perfumes</button>
+                      </div>
+                      <div className="add-preference">
+                          <button className="btn-preference">Agregar Preferencias</button>
+                      </div>
+                  {/* </div> */}
                 </div>
     
                 <div className="div-btn btn-dorwn">

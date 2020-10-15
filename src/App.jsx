@@ -8,6 +8,7 @@ import CreateClient from './view/CreateClient';
 import Calendar from './components/date/Calendar';
 import CreateOrder from './view/CreateOrder';
 import AddOrder from './view/AddOrder';
+import borrar from './components/StepFour';
 import './sass/index.scss';
 
 const App = () => (
@@ -19,7 +20,8 @@ const App = () => (
         <Route path="/calendar" component={Calendar}/>
         <Route path="/home" component={Home} />
         <Route path="/client" component={CreateClient} />
-        <Route path="/" component={Login} />
+        {/* <Route path="/" component={Login} /> */}
+        <Route path="/" component={borrar} />
       </Switch>
     </HashRouter>
   </Router>
