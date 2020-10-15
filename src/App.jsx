@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import Login from './view/Login';
 import Home from './view/Home';
+//import Reloj from './view/Auth';
 import CreateClient from './view/CreateClient';
 import './sass/index.scss';
 

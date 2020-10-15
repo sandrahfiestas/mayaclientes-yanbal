@@ -4,7 +4,7 @@ import StepOne from '../components/StepOne';
 import StepTwo from '../components/StepTwo';
 import StepThree from '../components/StepThree';
 import Success from '../components/Success';
-import {addClient} from '../controller/firestore';
+
 
 export class CreateClient extends Component {
   constructor(props){
