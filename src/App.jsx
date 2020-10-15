@@ -8,7 +8,6 @@ import Home from './view/Home';
 import CreateClient from './view/CreateClient';
 import './sass/index.scss';
 
-
 const App = () => (
   <Router>
     <HashRouter>
