@@ -8,7 +8,7 @@ registerLocale("es", es);
 
 class Calendar extends Component {
     state={
-      fecha: new Date("2018", "06", "22")
+      fecha: new Date("2020", "10", "16")
     }
     
     onChange=fecha=>{
@@ -25,9 +25,9 @@ class Calendar extends Component {
           <>
             <div className="contenedor">
               <div className="center">
-               <DatePicker selected={this.state.fecha} onChange={this.onChange} locale="es" className="pickers" dateFormat="dd 'de' MMMM 'de' yyyy"/>
+               <DatePicker selected={this.state.fecha} onChange={this.onChange} locale="es" className="pickers box" dateFormat="dd 'de' MMMM 'de' yyyy"/>
                <br /><br />
-               <input type="button" value="Mostrar Fecha" className="btn btn-primary" onClick={()=>this.mostrarFecha(this.state.fecha)}/>
+               <input type="button" value="Mostrar Fecha" className="btn btn-ligth color" onClick={()=>this.mostrarFecha(this.state.fecha)}/>
               </div>
             </div>
           </>

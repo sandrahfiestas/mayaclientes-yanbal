@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import btnBack from '../images/btn_back.png';
 import btnNext from '../images/btn_next.png';
+import Calendar from './date/Calendar';
 
 export class StepThree extends Component {
     continue = e => {
@@ -24,6 +25,9 @@ export class StepThree extends Component {
                 </div>
                 <div className="form-group form-register">
                   <p>Calendario</p>
+                <div className="card">
+                <Calendar/>
+                </div>
                 </div>
     
                 <div className="div-btn btn-dorwn">

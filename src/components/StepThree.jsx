@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+/*import React, { Component } from 'react'
 
 export class StepThree extends Component {
     continue = e => {
@@ -36,4 +36,4 @@ export class StepThree extends Component {
     }
 }
 
-export default StepThree;*/}
+export default StepThree;*/
