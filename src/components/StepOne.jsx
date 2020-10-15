@@ -24,7 +24,7 @@ export class StepOne extends Component {
                 <br />
                 <div className="div-btn">
                     <button className="btn btn-primary btn-form" onClick={this.continue}>
-                    <p className="txt-btn-form">Siguiete</p>
+                    <p className="txt-btn-form">Siguiente</p>
                     <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
                     </button>
 
