@@ -5,7 +5,7 @@ import {
 import Login from './view/Login';
 import Home from './view/Home';
 import CreateClient from './view/CreateClient';
-import Calendar from './components/date/Calendar';
+import Calendar from './components/calendar/Calendar';
 import CreateOrder from './view/CreateOrder';
 import AppOrder from './view/AppOrder';
 import './sass/index.scss';
