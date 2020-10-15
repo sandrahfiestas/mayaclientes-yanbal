@@ -75,28 +75,28 @@ function Welcome() {
       <button onClick={handleSend}>Send</button>
       <h5 className="welcome-hi">¡Hola, ...!</h5>
       <Link to="/client">
-        <button className="btn-options">
+        <button type="button" className="btn-options">
           <img src={book} className="icon-book" alt="icon-book" />
           <p className="txt-options">Agregar nuevos clientes</p>
           <img src={next} className="icon-next" alt="icon-next" />
         </button>
       </Link>
-      <button className="btn-options">
+      <button type="button" className="btn-options">
         <img src={headerOff} className="icon_heart_off" alt="icon_heart_off" />
         <p className="txt-options-off">A ellos les puede gustar</p>
         <img src={nextOff} className="icon_next_off" alt="icon_next_off" />
       </button>
-      <button className="btn-options">
+      <button type="button" className="btn-options">
         <img src={productsoff} className="icon_products_off" alt="icon_products_off" />
         <p className="txt-options-off">A tus clientes se les está acabando algunos productos, mira a quienes</p>
         <img src={nextOff} className="icon_next_off" alt="icon_next_off" />
       </button>
-      <button className="btn-options">
+      <button type="button" className="btn-options">
         <img src={moneyOff} className="icon_money_off" alt="icon_money_off" />
         <p className="txt-options-off">Hoy toca cobrarle a estos clientes</p>
         <img src={nextOff} className="icon_next_off" alt="icon_next_off" />
       </button>
-      <button className="btn-options">
+      <button type="button" className="btn-options">
         <img src={birthdayOff} className="icon_birthday_off" alt="icon_birthday_off" />
         <p className="txt-options-off">Hoy es cumpleaños de algunos clientes. Engríelos</p>
         <img src={nextOff} className="icon_next_off" alt="icon_next_off" />
