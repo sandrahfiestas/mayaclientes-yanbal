@@ -20,7 +20,7 @@ export class StepFive extends Component {
             <div className="form-container">
                 <div className="App">
                 <p className="txt-info-register">Agrega su fecha de nacimiento y te recordaremos saludarlos en su cumpleaños, con ideas para llevarles algún obsequio.</p>
-                <h1 className="mb-5">Agregar comentarios o información del cliente</h1>
+                <h1 className="mb-5 text-main">Agregar comentarios o información del cliente</h1>
                 </div>
                 <div className="form-group form-register">
 								<input className="form-control box-des" type="text" placeholder ="Aquí puedes describir mejor a tu cliente" readonly/>
@@ -35,7 +35,7 @@ export class StepFive extends Component {
                     </div>
                     <div className="">
                         <button className="btn btn-primary btn-form" onClick={this.continue}>
-                            <p className="txt-btn-form">Siguiente</p>
+                            <p className="txt-btn-form">Enviar</p>
                             <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
                         </button>
                     </div>
