@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import btnBack from '../images/btn_back.png';
+import btnNext from '../images/btn_next.png';
 
 export class StepTwo extends Component {
     continue = e => {
@@ -17,22 +19,25 @@ export class StepTwo extends Component {
         return (
             <div className="form-container">
                 <div className="App">
+                <p className="txt-info-register">Al ingresar su correo y su teléfono podrás contactarlos rápidamente para ofrecerle productos y recordarle sus fechas de pago.</p>
                   <h1 className="mb-5">Datos de contacto</h1>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" className="form-control" name="email" onChange={inputChange('email')} value={values.email} />
+                <div className="form-group form-register">
+                    <input type="email" className="form-control input-register" placeholder="correo electrónico" name="email" onChange={inputChange('email')} value={values.email} />
+                    <input type="number" className="form-control input-register" placeholder="telefono" name="phone" onChange={inputChange('phone')} value={values.phone} />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="phone">Phone Number</label>
-                    <input type="number" className="form-control" name="phone" onChange={inputChange('phone')} value={values.phone} />
-                </div>
-                <div className="row">
-                    <div className="col-6">
-                        <button className="btn btn-danger" onClick={this.back}>Volver</button>
+                <div className="div-btn btn-dorwn">
+                    <div className="">
+                        <button className="btn btn-danger btn-form" onClick={this.back}>
+                            <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
+                            <p className="txt-btn-form">Volver</p>
+                        </button>
                     </div>
-                    <div className="col-6 text-right">
-                        <button className="btn btn-primary" onClick={this.continue}>Siguiete</button>
+                    <div className="">
+                        <button className="btn btn-primary btn-form" onClick={this.continue}>
+                            <p className="txt-btn-form">Siguiete</p>
+                            <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
+                        </button>
                     </div>
                 </div>
             </div>
