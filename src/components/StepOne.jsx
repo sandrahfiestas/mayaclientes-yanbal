@@ -1,10 +1,30 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {addProducts} from '../controller/firestore';
 
 export class StepOne extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
+        fetch('../data/products.json')
+        .then((response) => {
+          try {
+            return response.json();
+          } catch (e) {
+            return Promise.reject(new Error('No se encontraron los datos'));
+          }
+        })
+        .then((datos) => {
+            console.log(datos)
+        datos.forEach(element=>{
+            addProducts(element)
+        })
+        })
+        .catch(() => console.log('No se encontró el archivo'));
     };
+
+
+
+
 
     render() {
         const { values, inputChange } = this.props;

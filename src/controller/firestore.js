@@ -1,12 +1,12 @@
-/*import firebase from './firebaseConfig';
+import firebase from './firebaseConfig';
 
 
 // COLECCION EN FIRESTORE - ADD ORDER
-const collectionOrder = () => firebase.firestore().collection('Orders');
+const collectionProducts = () => firebase.firestore().collection('Products');
 
 // AGREGAR DOCS A LA COLECCION
-export const addOrder = (order) => {
-  collectionOrder().add(order)
+export const addProducts = (product) => {
+  collectionProducts().add(product)
     .then((docRef) => {
       console.log('Document written with ID: ', docRef.id);
     })
@@ -17,7 +17,7 @@ export const addOrder = (order) => {
 export const addOrderTry = (order) => firebase.firestore().collection('Orders').add(order)
 // LEER LOS DOCS DE LA COLECCION
 const getOrder = (orderState) => new Promise((resolve, reject) => {
-  collectionOrder().where('state', '==', orderState).onSnapshot((query) => {
+  collectionProducts().where('state', '==', orderState).onSnapshot((query) => {
     const docs = [];
     query.forEach((order) => {
       docs.push({ ...order.data(), id: order.id });
@@ -36,14 +36,14 @@ const updateOrderState = (id, status) => {
 };
 
 export default {
-  addOrder,
+  addProducts,
   getOrder,
   updateOrderState,
-};*/
+};
 
-import firebase from './firebaseConfig'
+//import firebase from './firebaseConfig'
 
-export const addOrder = (order) => firebase.firestore().collection('Orders').add(order)
+//export const addOrder = (order) => firebase.firestore().collection('Orders').add(order)
 
 // export  const getOrders =(callback) =>  firebase.firestore().collection('Orders')
 

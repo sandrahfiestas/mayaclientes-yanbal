@@ -3,16 +3,14 @@ import Logo from "../images/logo.png";
 import Vector from "../images/Vector.png";
 //import {addOrder}  from '../controller/firestore';
 import { useHistory } from "react-router-dom";
-import {useFirebaseApp} from 'reactfire';
-import 'firebase/auth';
+import firebase from '../controller/firebaseConfig';
 
 
 
 const Login = () => {
   let history = useHistory();
 
-  const firebase = useFirebaseApp()
-  //console.log(firebase)
+ 
   
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
