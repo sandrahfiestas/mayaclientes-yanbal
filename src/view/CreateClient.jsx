@@ -2,7 +2,7 @@ import React, { Component }from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import StepOne from '../components/StepOne';
 import StepTwo from '../components/StepTwo';
-import StepThree from '../components/StepThree';
+import StepThree from '../components/StepThreeI';
 import Success from '../components/Success';
 import iconBack from '../images/icon_back.png';
 
@@ -72,9 +72,21 @@ export class CreateClient extends Component {
           case 2:
               return (
                 <div>
-                   <Navbar expand="lg" variant="light" bg="light">
+                   <Navbar expand="lg" variant="light" className="nav-bar">
                       <Container>
-                      <Navbar.Brand href="#"> Registro de Cliente</Navbar.Brand>
+                      <Navbar.Brand href="#">
+                      <div className="div-header-reg">
+                          <div>
+                            <img src={iconBack} className="icon-back" alt="icon-back" />
+                          </div>
+                          <div>
+                            <p className="txt-navi">Registro de Cliente</p>
+                          </div>
+                          <div>
+                            <button className="btn-count"><p className="txt-count">2/4</p></button>
+                          </div>
+                        </div>
+                      </Navbar.Brand>
                       </Container>
                    </Navbar>
                     <StepTwo
@@ -88,9 +100,21 @@ export class CreateClient extends Component {
           case 3:
               return (
                  <div>
-                   <Navbar expand="lg" variant="light" bg="light">
+                   <Navbar expand="lg" variant="light" className="nav-bar">
                       <Container>
-                      <Navbar.Brand href="#"> Registro de Cliente</Navbar.Brand>
+                      <Navbar.Brand href="#">
+                      <div className="div-header-reg">
+                          <div>
+                            <img src={iconBack} className="icon-back" alt="icon-back" />
+                          </div>
+                          <div>
+                            <p className="txt-navi">Registro de Cliente</p>
+                          </div>
+                          <div>
+                            <button className="btn-count"><p className="txt-count">3/4</p></button>
+                          </div>
+                        </div>
+                      </Navbar.Brand>
                       </Container>
                    </Navbar>
                    <StepThree
