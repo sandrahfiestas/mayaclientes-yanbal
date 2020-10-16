@@ -7,8 +7,7 @@ import Calendar from './calendar/Calendar';
 export class FormClient extends Component {
  
   render() {
-    const { client, inputChange, addNewClient, nextStep, prevStep, step,onChange} = this.props;
-
+    const { client, inputChange, addNewClient, nextStep, prevStep, step,onChange, subCats, addPreferences, stateInput, changeState,addPreferenceText,newPreference} = this.props;
     return (
       <>
         <div className="form-container" hidden={step === 1 ? false : true }>
@@ -87,22 +86,28 @@ export class FormClient extends Component {
 
         <div className="form-container" hidden={step === 4 ? false : true }>
           <div className="App">
-
-          <p className="txt-info-register">Elige las preferencias y necesidades de tu cliente y te daremos promociones y sugerencias para ofrecerle nuevos productos.</p>
-          <h1 className="mb-5 txt-subtitle">¿Qué tipo de productos prefiere <br></br> tu cliente?</h1>
-
+            <p className="txt-info-register">Elige las preferencias y necesidades de tu cliente y te daremos promociones y sugerencias para ofrecerle nuevos productos.</p>
+            <h1 className="mb-5 txt-subtitle">¿Qué tipo de productos prefiere <br></br> tu cliente?</h1>
+            <div className="">
+              {client.preferences.map((element,index) => {
+                  return (<button className="btn-preference" key={index}>{element}</button>);
+              })}
+            </div>
           </div>
           <div className="form-group form-register div-preferences">
             {/* <div className="div-preferences"> */}
                 <div className="preference">
-                    <button className="btn-preference">Cuidado personal</button>
-                    <button className="btn-preference">Hidratantes</button>
-                    <button className="btn-preference">Maquillaje</button>
-                    <button className="btn-preference">Perfumes</button>
+                  {subCats.map((element,index) => {
+                    if(client.preferences.indexOf(element)===-1){
+                      return (<button className="btn-preference" key={index} onClick={()=>addPreferences(element)}>{element}</button>);
+                    }
+                  })}
                 </div>
                 <div className="add-preference">
-                    <button className="btn-preference">Agregar Preferencias</button>
+                  <button className="btn-preference" onClick={stateInput}>Agregar Preferencias</button>
                 </div>
+                <input type="text" hidden={changeState} className="form-control input-register" placeholder="nombres" name="name" onChange={(e)=>addPreferenceText(e)} value={newPreference}/>
+                <button type="button" hidden={changeState} onClick={()=>addPreferences(newPreference)}>Agregar</button>
             {/* </div> */}
           </div>
 

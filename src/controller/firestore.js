@@ -27,7 +27,7 @@ export const addProducts = (product) => {
 };
 
 // LEER LOS DOCS DE LA COLECCION
-const getProducts = () => new Promise((resolve, reject) => {
+export const getProducts = () => new Promise((resolve, reject) => {
   collectionProducts().onSnapshot((query) => {
     const docs = [];
     query.forEach((product) => {

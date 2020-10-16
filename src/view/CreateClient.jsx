@@ -7,18 +7,65 @@ export class CreateClient extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      newPreference:'',
+      changeState: true,
       step: 1,
+      subCats: [],
       client: {
         name: '',
         lastName: '',
         email: '',
         phone: '',
         date: new Date(),
+        preferences: [],
         description: '',
       }
     };
   };
+ 
+  componentDidMount(){
+    this.loadPreference();
+  }
+  stateInput=() => {
+    let { changeState } = this.state;
+    changeState = !changeState;
+    this.setState({ changeState });
+  }
+  onlyUnique =(value, index, self)=> { 
+    return self.indexOf(value) === index;
+  }
+  addPreferenceText=(e)=>{
+    let { newPreference } = this.state;
+    newPreference =e.target.value;
+    this.setState({ newPreference });
+  }
 
+  inputChange = input => e => {
+    const { client } = this.state;
+    client[input] = e.target.value;
+    this.setState({ client: { ...client } });
+  };
+  loadPreference =()=>{
+    getProducts().then((preferences)=>{
+      let subCats=[];
+      preferences.map((item)=>{ 
+        subCats.push(item.sub_cat);
+      });
+      subCats = subCats.filter(this.onlyUnique);
+      
+      this.setState({subCats});
+    }).catch(()=>{
+      console.log('fallo');
+    });
+  }
+
+  addPreferences= (preference) => {
+    const {client} = this.state;
+    client.preferences.push(preference);
+    this.setState({client: { ...client }});
+  }
+
+  
   onChange=date=>{
     const {client} = this.state;
     client.date = date;
@@ -42,17 +89,13 @@ export class CreateClient extends Component {
     this.setState({ step });
   };
 
-  inputChange = input => e => {
-    const { client } = this.state;
-    client[input] = e.target.value;
-    this.setState({ client: { ...client } });
-  };
+ 
   addNewClient = (client) => {
     addClient(client);
   }
  
   render() {
-      const { client, step} = this.state;
+      const { client, step, subCats, changeState, newPreference} = this.state;
     return (
         <div className="">
           <Navbar expand="lg" variant="light" bg="light">
@@ -65,9 +108,16 @@ export class CreateClient extends Component {
             nextStep={this.nextStep}
             inputChange={this.inputChange}
             step={step}
+            changeState={changeState}
             client={client}
+            newPreference={newPreference}
             onChange={this.onChange}
             addNewClient={this.addNewClient}
+            subCats={subCats}
+            addPreferences={this.addPreferences}
+            stateInput={this.stateInput}
+            addPreferenceText={this.addPreferenceText}
+            
         />
         </div>
     );
