@@ -22,14 +22,13 @@ const CreateOrder = () => {
             <div className="card-text bar">Ingresa el nombre o código de producto:.</div>
             <hr/>
             <div className="card-body">
-                
-                
-								
-            </div>
+              </div>
 						<div className="">
                     <button className="btn btn-primary btn-form">
                         <p className="txt-btn-form">Siguiente</p>
-                        <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
+                    </button>
+                    <button className="btn btn-primary btn-form">
+                        <p className="txt-btn-form">Cancelar</p>
                     </button>
                 </div>
         </div>
