@@ -56,7 +56,7 @@ export class FormClient extends Component {
         <div className="form-container" hidden={step === 3 ? false : true }>
           <div className="App">
             <p className="txt-info-register">Agrega su fecha de nacimiento y te recordaremos saludarlos en su cumpleaños, con ideas para llevarles algún obsequio.</p>
-            <h1 className="mb-5">¿Qué día cumple años tu cliente?</h1>
+            <h1 className="mb-5">¿Qué día cumpleaños tu cliente?</h1>
           </div>
           <div className="form-group form-register">
             <p>Calendario</p>
