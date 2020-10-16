@@ -6,14 +6,7 @@ import React, { useState, useEffect } from 'react';
 
 
 function Dashboard() {
-
-    return (
-        <>
-            <div className="nav">
-                <button className="btn-nav" >
-                    <a>Clientes</a>
-                </button>
-              
+  
     const [data, setData] = useState([0]);
 
     //lectura del json
