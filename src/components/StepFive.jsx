@@ -23,7 +23,7 @@ export class StepFive extends Component {
                 <h1 className="mb-5 text-main">Agregar comentarios o información del cliente</h1>
                 </div>
                 <div className="form-group form-register">
-								<input className="form-control box-des" type="text" placeholder ="Aquí puedes describir mejor a tu cliente" readonly/>
+				  <textarea className="form-control box-des" type="text" placeholder ="Aquí puedes describir mejor a tu cliente" readonly/>
                 </div>
     
                 <div className="div-btn btn-dorwn">
