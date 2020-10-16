@@ -9,14 +9,13 @@ registerLocale("es", es);
 class Calendar extends Component {
    
       render() {
-          const {onChange, mostrarFecha, client} = this.props;
+          const {onChange, client} = this.props;
         return (
           <>
             <div className="contenedor">
               <div className="center">
                <DatePicker selected={client.date} onChange={onChange} locale="es" className="pickers box" dateFormat="dd 'de' MMMM 'de' yyyy"/>
                <br /><br />
-               {/* <input type="button" value="Mostrar Fecha" className="btn btn-ligth color" onClick={()=>mostrarFecha(client.date)}/> */}
               </div>
             </div>
           </>
