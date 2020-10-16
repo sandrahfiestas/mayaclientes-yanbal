@@ -14,18 +14,84 @@ export class StepsOrder extends Component {
       <>
        
        <div className="nav"   hidden={step === 1 ? false : true }>
-
-            <div>
-                </div>
             </div>
             <div className="div-cards">
-                <p className="txt-card">Ingresa el nombre o código de producto.</p>
-           
-                
-
+                <p className="txt-card">Ingresa el nombre del cliente.</p>
+                <hr/>
+                <div className="form-group form-register">
+            <input type="email" className="form-control input-register" placeholder="" name="email"/>
+          </div>
+          <div className="div-btn btn-dorwn">
+            <div className="">
+              <button className="btn btn-danger btn-form" onClick={prevStep}>
+                  <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
+                  <p className="txt-btn-form">Cancelar</p>
+              </button>
+            </div>
+            <div className="">
+              <button className="btn btn-primary btn-form" onClick={nextStep}>
+                <p className="txt-btn-form">Siguiente</p>
+                <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
+              </button>
+            </div>
+          </div>
             </div>
 
-        <div className="form-container" hidden={step === 2 ? false : true }>
+
+            <div className="nav"   hidden={step === 2 ? false : true }>
+            </div>
+            <div className="div-cards">
+                <p className="txt-card">Ingresa el nombre del cliente.</p>
+                <hr/>
+                <div className="form-group form-register">
+            <input type="email" className="form-control input-register" placeholder="" name="email"/>
+          </div>
+          <div className="div-btn btn-dorwn">
+            <div className="">
+              <button className="btn btn-danger btn-form" onClick={prevStep}>
+                  <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
+                  <p className="txt-btn-form">Cancelar</p>
+              </button>
+            </div>
+            <div className="">
+              <button className="btn btn-primary btn-form" onClick={nextStep}>
+                <p className="txt-btn-form">Siguiente</p>
+                <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
+              </button>
+            </div>
+          </div>
+            </div>
+
+
+
+
+            <div className="nav"   hidden={step === 3 ? false : true }>
+            </div>
+            <div className="div-cards">
+                <p className="txt-card">Ingresa el nombre del cliente.</p>
+                <hr/>
+                <div className="form-group form-register">
+            <input type="email" className="form-control input-register" placeholder="" name="email"/>
+          </div>
+          <div className="div-btn btn-dorwn">
+            <div className="">
+              <button className="btn btn-danger btn-form" onClick={prevStep}>
+                  <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
+                  <p className="txt-btn-form">Cancelar</p>
+              </button>
+            </div>
+            <div className="">
+              <button className="btn btn-primary btn-form" onClick={nextStep}>
+                <p className="txt-btn-form">Siguiente</p>
+                <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
+              </button>
+            </div>
+          </div>
+            </div>
+            
+
+
+        <div className="form-container" hidden={step === 4 ? false : true }>
           <div className="App">
             <p className="txt-info-register">Registra aquí el monto al que estas comprando los productos en este pedido.</p>
             <h1 className="mb-5">Ingresar monto del pedido</h1>
@@ -50,7 +116,7 @@ export class StepsOrder extends Component {
           </div>
         </div>
 
-        <div className="form-container" hidden={step === 3 ? false : true }>
+        <div className="form-container" hidden={step === 5 ? false : true }>
           <div className="App">
             <p className="txt-info-register">Registra aquí el monto al que estas dejando los productos a tu cliente.</p>
             <h1 className="mb-5">Ingresa monto a cobrar</h1>
@@ -74,7 +140,7 @@ export class StepsOrder extends Component {
           </div>
         </div>
 
-        <div className="form-container" hidden={step ===  4? false : true }>
+        <div className="form-container" hidden={step ===  6? false : true }>
           <div className="App">
             <p className="txt-info-register">Ingresar fecha máxima,en la que estas acordando el pago de este pedido con tu cliente.</p>
             <h1 className="mb-5">Ingresa fecha de pago</h1>
@@ -103,6 +169,30 @@ export class StepsOrder extends Component {
             </div>
           </div>
         </div>
+
+        <div className="nav"   hidden={step === 7 ? false : true }>
+            </div>
+            <div className="div-cards">
+                <p className="txt-card">.</p>
+                <hr/>
+                <div className="form-group form-register">
+            <input type="email" className="form-control input-register" placeholder="" name="email"/>
+          </div>
+          <div className="div-btn btn-dorwn">
+            <div className="">
+              <button className="btn btn-danger btn-form" onClick={prevStep}>
+                  <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
+                  <p className="txt-btn-form">Cancelar</p>
+              </button>
+            </div>
+            <div className="">
+              <button className="btn btn-primary btn-form" onClick={nextStep}>
+                <p className="txt-btn-form">Siguiente</p>
+                <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
+              </button>
+            </div>
+          </div>
+            </div>
      </>
     );
   }
