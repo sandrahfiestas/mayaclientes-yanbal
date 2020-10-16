@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import StepsOrder from '../components/StepsOrder';
+import iconBack from '../images/icon_back.png';
+
 export class CreateOrder extends Component {
     constructor(props) {
       super(props);
@@ -45,9 +47,21 @@ export class CreateOrder extends Component {
       return (
     
         <div className="">
-          <Navbar expand="lg" variant="light" bg="light">
-            <Container>
-            <Navbar.Brand href="#"> Registro de Pedidos</Navbar.Brand>
+          <Navbar expand="lg" variant="light" className="nav-bar">
+            <Container>    
+              <Navbar.Brand href="#">
+                <div className="div-header-reg">
+                    <div>
+                      <img src={iconBack} className="icon-back" alt="icon-back" />
+                    </div>
+                    <div>
+                      <p className="txt-navi">Registro de Pedido</p>
+                    </div>
+                    <div>
+                      <button className="btn-count"><p className="txt-count">2/4</p></button>
+                    </div>
+                  </div>
+              </Navbar.Brand>
             </Container>
           </Navbar>
           <StepsOrder
