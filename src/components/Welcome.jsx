@@ -56,6 +56,7 @@ function Welcome() {
         </button>
       </Link>
 
+      <Link to="/oportunity">
       <button type="button" className="btn-options">
         <img src={headerOn} className="icon_heart_off" alt="icon_heart_off" />
         <div className="div-txt">
@@ -64,6 +65,7 @@ function Welcome() {
         </div>
         <img src={next} className="icon_next" alt="icon_next" />
       </button>
+      </Link>
 
       <button type="button" className="btn-options">
         <img src={productsOn} className="icon_products_off" alt="icon_products_off" />
