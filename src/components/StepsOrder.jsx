@@ -29,6 +29,17 @@ export class StepsOrder extends Component {
         <div className="form-container" hidden={step === 2 ? false : true }>
           <div className="App">
             <p className="txt-info-register">Al ingresar su correo y su teléfono podrás contactarlos rápidamente para ofrecerle productos y recordarle sus fechas de pago.</p>
+            {/* <Card className="shadow">
+              <article className="empCard">
+                <img src={btnNext} alt="logo" className="EmpLogo" />
+                <div className="card-info-emp">
+                  <h5>
+                    Elixir de ojos
+                  </h5>
+                  <hr />
+               </div>
+             </article>
+        </Card> */}
             <h1 className="mb-5">Datos de contacto</h1>
           </div>
           <div className="form-group form-register">

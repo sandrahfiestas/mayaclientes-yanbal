@@ -44,7 +44,7 @@
   .form-register {
     margin-top: 15px;
     padding: 0em 2.5em;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -107,14 +107,14 @@
 
   .preference {
     padding-left: 2em;
-    width: 350px;
+    // width: 1000px;
     margin:0.5em
   }
 
   .box-des{
     height: 100px;
     text-align: center;
-    background-color: yellow;
+    // background-color: yellow;
     overflow-wrap: break-word;
 
   }
