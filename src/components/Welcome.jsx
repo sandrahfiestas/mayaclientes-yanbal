@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import book from '../images/icon_book_on.png';
 import next from '../images/icon_next_on.png';
-import nextOff from '../images/icon_next_off.png';
-import headerOff from '../images/icon_heart_off.png';
-import productsoff from '../images/icon_products_off.png';
-import moneyOff from '../images/icon_money_off.png';
-import birthdayOff from '../images/icon_birthday_off.png';
+// import nextOff from '../images/icon_next_off.png';
+import headerOn from '../images/icon_heart_on.png';
+import productsOn from '../images/icon_products_on.png';
+import moneyOn from '../images/icon_money_on.png';
+import birthdayOn from '../images/icon_birthday_on.png';
 import { addProducts } from '../controller/firestore';
 
 function Welcome() {
@@ -88,39 +88,38 @@ function Welcome() {
       </Link>
 
       <button type="button" className="btn-options">
-        <img src={headerOff} className="icon_heart_off" alt="icon_heart_off" />
+        <img src={headerOn} className="icon_heart_off" alt="icon_heart_off" />
         <div className="div-txt">
-          <p className="txt-title txt-color-off">A tus clientes les puede gustar</p>
-          <p className="txt-p txt-color-off">Te dejamos algunas ideas de productos y promociones que les pueden interesar</p>
+          <p className="txt-title txt-color-on">A tus clientes les puede gustar</p>
+          <p className="txt-p txt-color-normal">Te dejamos algunas ideas de productos y promociones que les pueden interesar</p>
         </div>
-        <img src={nextOff} className="icon_next_off" alt="icon_next_off" />
+        <img src={next} className="icon_next" alt="icon_next" />
       </button>
 
       <button type="button" className="btn-options">
-        <img src={productsoff} className="icon_products_off" alt="icon_products_off" />
+        <img src={productsOn} className="icon_products_off" alt="icon_products_off" />
         <div className="div-txt">
-          <p className="txt-title txt-color-off">Se les están acabando  estos productos!</p>
-          <p className="txt-p txt-color-off">Hace tiempo que tus clientes te compraron estos productos.Es tiempo de reponerlos!</p>
+          <p className="txt-title txt-color-on">Se les están acabando  estos productos!</p>
+          <p className="txt-p txt-color-normal">Hace tiempo que tus clientes te compraron estos productos.Es tiempo de reponerlos!</p>
         </div>
-        <img src={nextOff} className="icon_next_off" alt="icon_next_off" />
+        <img src={next} className="icon_next" alt="icon_next" />
       </button>
 
       <button type="button" className="btn-options">
-        <img src={moneyOff} className="icon_money_off" alt="icon_money_off" />
+        <img src={moneyOn} className="icon_money_on" alt="icon_money_off" />
         <div className="div-txt">
-          <p className="txt-title txt-color-off">Hoy toca cobrarle a estos clientes</p>
-          <p className="txt-p txt-color-off">Mira la lista de los clientes que deben pagarte y enviales un mensaje de forma facil</p>
+          <p className="txt-title txt-color-on">Hoy toca cobrarle a estos clientes</p>
+          <p className="txt-p txt-color-normal">Mira la lista de los clientes que deben pagarte y enviales un mensaje de forma facil</p>
         </div>
-        <img src={nextOff} className="icon_next_off" alt="icon_next_off" />
+        <img src={next} className="icon_next" alt="icon_next" />
       </button>
 
       <button type="button" className="btn-options">
-        <img src={birthdayOff} className="icon_birthday_off" alt="icon_birthday_off" />
+        <img src={birthdayOn} className="icon_birthday_off" alt="icon_birthday_off" />
         <div className="div-txt">
-          <p className="txt-title txt-color-off">Hoy es cumpleaños de algunos clientes. Engríelos</p>
-          {/* <p className="txt-p txt-color-off"></p> */}
+          <p className="txt-title txt-color-on">Hoy es cumpleaños de algunos clientes. Engríelos</p>
         </div>
-        <img src={nextOff} className="icon_next_off" alt="icon_next_off" />
+        <img src={next} className="icon_next" alt="icon_next" />
       </button>
     </div>
   );
