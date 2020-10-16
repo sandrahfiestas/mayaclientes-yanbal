@@ -36,37 +36,6 @@ function Welcome() {
       console.log('acá');
       addProducts(element);
     });
-    // addProducts({
-    //   sap: 20011527,
-    //   jr: '010103A000',
-    //   cod_fam: 1,
-    //   fam: 'COSMETICOS',
-    //   cod_cat: 1,
-    //   cat: 'TRATAMIENTO FACIAL',
-    //   cod_sub: 3,
-    //   sub_cat: 'HIDRATANTES',
-    //   cod_lin: 'A0',
-    //   lin: 'HIDRATANTES',
-    //   'cod-gama': 0,
-    //   gam: 'N.A.',
-    //   tex_bre: 'BB CREAM MATT SPF 25 BEIGE-2',
-    //   FIELD14: '40',
-    //   FIELD15: 'ml',
-    //   FIELD16: 67,
-    //   FIELD17: 'SENTIVA BB CREAM MATT SPF 25',
-    //   dur: 2,
-    //   'eda-min': 20,
-    //   'eda-max': 110,
-    //   gen: 'Todos',
-    //   int_1: 'Cubrir imperfecciones',
-    //   int_2: 'Hidratación con color',
-    //   int_3: 'Grasa',
-    //   int_4: 'Brillo',
-    //   int_5: '',
-    //   int_6: '',
-    //   int_7: '',
-    //   'int-8': '',
-    // });
   };
 
   return (
