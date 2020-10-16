@@ -7,13 +7,7 @@ import React, { useState, useEffect } from 'react';
 
 function Dashboard() {
 
-    return (
-        <>
-            <div className="nav">
-                <button className="btn-nav" >
-                    <a>Clientes</a>
-                </button>
-              
+  
     const [data, setData] = useState([0]);
 
     //lectura del json
@@ -23,7 +17,7 @@ function Dashboard() {
           .then((datos) => {
             setData(datos);
             console.log(datos);
-          });
+          })
       });
 
     return (
@@ -60,7 +54,6 @@ function Dashboard() {
                 </div>
 
                 <div className="card">
-
                  <p className="description-card">A María Santos, podría interesarle estos productos</p>
                     <div className="div-items">
                        <img className="img" src='https://user-images.githubusercontent.com/60890508/96071139-1f087380-0e67-11eb-92ed-5a20b5ab383e.jpg' alt="imagen" /> 
@@ -70,8 +63,7 @@ function Dashboard() {
                    
                         <a className="rounded   icon-social" href="https://wa.me/51992781141/?text=%C2%A1Hola%0A%0Ahola%0A%0A" ><img src={whatsapp} /></a>
                         <a href="tel:+910469991" className="rounded  icon-social1"><img src={llamada} /></a>
-                   
-              
+     
                 </div>
 
             </div>
