@@ -47,7 +47,7 @@ export class CreateOrder extends Component {
         <div className="">
           <Navbar expand="lg" variant="light" bg="light">
             <Container>
-            <Navbar.Brand href="#"> Registro de Cliente</Navbar.Brand>
+            <Navbar.Brand href="#"> Registro de Pedidos</Navbar.Brand>
             </Container>
           </Navbar>
           <StepsOrder
