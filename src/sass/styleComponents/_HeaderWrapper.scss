@@ -1,0 +1,46 @@
+
+$primary-color: #DC582A;
+$gray:#BDBDBD;
+$white:#ffff;
+.view{
+    height: 632px;
+}
+.barra{
+    height:120px;
+    background: $primary-color;
+}
+.bar{
+    border: 1px solido $gray;
+}
+.card-title{
+    color: $white;
+    padding: 30px;
+}
+.icon{
+    margin: 0px  240px
+}
+.next{
+    border: 1px solido $primary-color;
+}
+.btn-form {
+    width: 180px;
+    height: 57px;
+    background-color: $white;
+    border: 1px solid $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+
+
+  .txt-btn-form {
+    color: $black;
+    font-size: 1.3em;
+    margin: 0;
+  }
+
+  .icon-next-form {
+    width: 0.9em;
+  }
+

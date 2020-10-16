@@ -1,0 +1,32 @@
+.nav-bar {
+  padding-top: 1.8em;
+  background-color: $primary-color;
+  line-height:0
+}
+
+.div-header-reg {
+  width: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.txt-navi {
+  color: $white;
+  margin:0;
+  margin-left: -50px;
+  
+}
+
+.btn-count {
+  border-style: none;
+  height: 30px;
+  width: 50px;
+  border-radius: 15px;
+}
+
+.txt-count {
+  font-size: 0.7em;
+  font-weight: bold;
+  margin:0;
+}
