@@ -14,7 +14,7 @@ const AppOrder = () => {
             <hr />
             <div className="card-text bar">Elige como quisieras ingresar este pedido.</div>
             <hr />
-            <div class="form-check form-check-inline">
+            <div className="form-check form-check-inline">
                 <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
                 <label className="form-check-label" for="inlineRadio1"><h3>Por monto</h3>
                     <p>ingresa la cantidad total que cobraste por un pedido para seguir esa venta</p></label>
