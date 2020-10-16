@@ -157,7 +157,7 @@ export class FormClient extends Component {
             <p>¿Deseas ingresar pedidos?.</p>
           </div>
           <div className="modal-footer">
-            <Link to="/pedidos">
+            <Link to="/order">
               <button type="button" className="btn btn-primary">¡SÍ!</button>
               </Link>
             <Link to="/home">
