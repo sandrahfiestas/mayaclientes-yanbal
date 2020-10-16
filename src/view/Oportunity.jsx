@@ -13,5 +13,4 @@ function Oportunity() {
     </>
   );
 }
-
 export default Oportunity;

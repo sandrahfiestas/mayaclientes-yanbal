@@ -1,4 +1,3 @@
-
 import whatsapp from '../images/whatsapp.png';
 import llamada from '../images/llamada.png';
 import React, { useState, useEffect } from 'react';
@@ -16,7 +15,7 @@ function Dashboard() {
           .then((datos) => {
             setData(datos);
             console.log(datos);
-          });
+          })
       });
 
     return (
@@ -32,10 +31,8 @@ function Dashboard() {
                   <a>Oportunidades</a>
                 </button>
             <div>
-
                 </div>
             </div>
-
             <div className="div-cards">
                 <p className="txt-card">Estos productos podría interesarle a tus clientes.</p>
            
@@ -46,14 +43,10 @@ function Dashboard() {
                        <img className="img" src='https://user-images.githubusercontent.com/60890508/96071166-2a5b9f00-0e67-11eb-9e17-4432c6b5154d.jpg' alt="imagen" /> 
                        <img className="img" src='https://user-images.githubusercontent.com/60890508/96071048-fd0ef100-0e66-11eb-9da2-b148efcb2625.jpg' alt="imagen" /> 
                     </div>
-                 
                         <a href="https://wa.me/51992781141/?text=%C2%A1Hola%0A%0Ahola%0A%0A" className="rounded icon-social"><img src={whatsapp} /></a>
-                        <a href="tel:+910469991" className="rounded  icon-social1"><img src={llamada} /></a>
-                  
+                        <a href="tel:910469991" className="rounded  icon-social1"><img src={llamada} /></a>
                 </div>
-
                 <div className="card">
-
                  <p className="description-card">A María Santos, podría interesarle estos productos</p>
                     <div className="div-items">
                        <img className="img" src='https://user-images.githubusercontent.com/60890508/96071139-1f087380-0e67-11eb-92ed-5a20b5ab383e.jpg' alt="imagen" /> 
@@ -63,13 +56,11 @@ function Dashboard() {
                    
                         <a className="rounded   icon-social" href="https://wa.me/51992781141/?text=%C2%A1Hola%0A%0Ahola%0A%0A" ><img src={whatsapp} /></a>
                         <a href="tel:+910469991" className="rounded  icon-social1"><img src={llamada} /></a>
-                   
-              
+     
                 </div>
 
             </div>
         </>
     );
 }
-
 export default Dashboard;
