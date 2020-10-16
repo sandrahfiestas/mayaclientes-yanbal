@@ -179,7 +179,7 @@ export class CreateClient extends Component {
                          </div>
                        </Navbar.Brand>
                        </Container>
-                    </Navbar>+
+                    </Navbar>
                     <StepFive
                        nextStep={this.nextStep}
                        prevStep={this.prevStep}
