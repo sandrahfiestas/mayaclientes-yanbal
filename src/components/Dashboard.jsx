@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 
 
 function Dashboard() {
-
   
     const [data, setData] = useState([0]);
 
