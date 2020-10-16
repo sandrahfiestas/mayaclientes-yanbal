@@ -7,13 +7,9 @@ export class CreateOrder extends Component {
       this.state = {
         step: 1,
         Order: {
-          name: '',
-          lastName: '',
-          email: '',
-          phone: '',
+          amountPay: '',
+          amountCharge: '',
           date: new Date(),
-          preferences: [],
-          description: '',
         }
       };
     };
@@ -34,14 +30,18 @@ export class CreateOrder extends Component {
       client[input] = e.target.value;
       this.setState({ client: { ...client } });
     };
-  
+    onChange=date=>{
+      const {client} = this.state;
+      client.date = date;
+      this.setState({client: { ...client }});
+    }
    
     // addNewClient = (client) => {
     //   addClient(client);
     // }
 
     render() {
-      const {step} = this.state;
+      const {step,Order} = this.state;
       return (
     
         <div className="">
@@ -55,6 +55,8 @@ export class CreateOrder extends Component {
             nextStep={this.nextStep}
             inputChange={this.inputChange}
             step={step}
+            onChange={this.onChange}
+            Order={Order}
             
         />
         </div>

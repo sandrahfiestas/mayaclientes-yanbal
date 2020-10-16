@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import btnBack from '../images/btn_back.png';
 import btnNext from '../images/btn_next.png';
-import Calendar from './calendar/Calendar';
+import CalendarOrder from './calendar/CalendarOrder';
 
 export class StepsOrder extends Component {
   render() {
-    const { inputChange, nextStep, prevStep, step,} = this.props;
+    const { inputChange, nextStep, prevStep, step,onChange,Order} = this.props;
     return (
       <>
         <div className="form-container" hidden={step === 1 ? false : true }>
@@ -63,15 +63,15 @@ export class StepsOrder extends Component {
             <p className="txt-info-register">Ingresar fecha máxima,en la que estas acordando el pago de este pedido con tu cliente.</p>
             <h1 className="mb-5">Ingresa fecha de pago</h1>
           </div>
-          {/*<div className="form-group form-register">
+          <div className="form-group form-register">
             <p>Calendario</p>
             <div className="card">
-              <Calendar
-              //onChange={onChange}
-              //client={client}
+              <CalendarOrder
+              onChange={onChange}
+                  Order={Order}
               />
             </div>
-           </div>*/}
+           </div>
           <div className="div-btn btn-dorwn">
             <div className="">
               <button className="btn btn-danger btn-form" onClick={prevStep}>
