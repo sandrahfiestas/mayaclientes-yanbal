@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import btnBack from '../images/btn_back.png';
 import btnNext from '../images/btn_next.png';
-import Calendar from './date/Calendar';
+import Calendar from './calendar/Calendar';
 
 export class StepThree extends Component {
     continue = e => {

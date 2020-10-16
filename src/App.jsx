@@ -5,15 +5,17 @@ import {
 import Login from './view/Login';
 import Home from './view/Home';
 import CreateClient from './view/CreateClient';
-import Calendar from './components/date/Calendar';
+import Calendar from './components/calendar/Calendar';
 import CreateOrder from './view/CreateOrder';
 import AppOrder from './view/AppOrder';
+import Oportunity from './view/Oportunity';
 import './sass/index.scss';
 
 const App = () => (
   <Router>
     <HashRouter>
       <Switch>
+        <Route path="/oportunity" component={Oportunity}/>
         <Route path="/appOrder" component={AppOrder}/>
         <Route path="/createOrder" component={CreateOrder}/>
         <Route path="/calendar" component={Calendar}/>
