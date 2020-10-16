@@ -41,11 +41,6 @@ export class StepsOrder extends Component {
             <div className="nav"   hidden={step === 2 ? false : true }>
             </div>
             <div className="div-cards">
-                <p className="txt-card">Ingresa el nombre del cliente.</p>
-                <hr/>
-                <div className="form-group form-register">
-            <input type="email" className="form-control input-register" placeholder="" name="email"/>
-          </div>
           <div className="div-btn btn-dorwn">
             <div className="">
               <button className="btn btn-danger btn-form" onClick={prevStep}>
@@ -67,12 +62,7 @@ export class StepsOrder extends Component {
 
             <div className="nav"   hidden={step === 3 ? false : true }>
             </div>
-            <div className="div-cards">
-                <p className="txt-card">Ingresa el nombre del cliente.</p>
-                <hr/>
-                <div className="form-group form-register">
-            <input type="email" className="form-control input-register" placeholder="" name="email"/>
-          </div>
+            <div className="div-cards">    
           <div className="div-btn btn-dorwn">
             <div className="">
               <button className="btn btn-danger btn-form" onClick={prevStep}>
@@ -170,29 +160,7 @@ export class StepsOrder extends Component {
           </div>
         </div>
 
-        <div className="nav"   hidden={step === 7 ? false : true }>
-            </div>
-            <div className="div-cards">
-                <p className="txt-card">.</p>
-                <hr/>
-                <div className="form-group form-register">
-            <input type="email" className="form-control input-register" placeholder="" name="email"/>
-          </div>
-          <div className="div-btn btn-dorwn">
-            <div className="">
-              <button className="btn btn-danger btn-form" onClick={prevStep}>
-                  <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
-                  <p className="txt-btn-form">Cancelar</p>
-              </button>
-            </div>
-            <div className="">
-              <button className="btn btn-primary btn-form" onClick={nextStep}>
-                <p className="txt-btn-form">Siguiente</p>
-                <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
-              </button>
-            </div>
-          </div>
-            </div>
+      
      </>
     );
   }
