@@ -30,18 +30,18 @@ function Welcome() {
       .catch(() => console.log('No se encontró el archivo'));
   }, []);
 
-  const handleSend = (e) => {
-    e.preventDefault();
-    data.forEach((element) => {
-      console.log('acá');
-      addProducts(element);
-    });
-  };
+  // const handleSend = (e) => {
+  //   e.preventDefault();
+  //   data.forEach((element) => {
+  //     console.log('acá');
+  //     addProducts(element);
+  //   });
+  // };
 
   return (
     <div className="div-welcome">
 
-      <button type="button" onClick={handleSend}>Send</button>
+      {/* <button type="button" onClick={handleSend}>Send</button> */}
       <h5 className="welcome-hi">¡Hola, ...!</h5>
       <p className="txt-p space-p txt-color-normal">Mira todo lo que tenemos para ti hoy:</p>
 

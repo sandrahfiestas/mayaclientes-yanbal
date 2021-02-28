@@ -94,7 +94,7 @@ export class FormClient extends Component {
               })}
             </div>
           </div>
-          <div className="form-group form-register div-preferences">
+          <div className="div-preferences">
             {/* <div className="div-preferences"> */}
                 <div className="preference">
                   {subCats.map((element,index) => {

@@ -8,12 +8,12 @@ registerLocale("es", es);
 class CalendarOrder extends Component {
    
       render() {
-          const {onChange, Order} = this.props;
+          const {onChange, order} = this.props;
         return (
           <>
             <div className="contenedor">
               <div className="center">
-               <DatePicker selected={Order.date} onChange={onChange} locale="es" className="pickers box" dateFormat="dd 'de' MMMM 'de' yyyy"/>
+               <DatePicker selected={order.date} onChange={onChange} locale="es" className="pickers box" dateFormat="dd 'de' MMMM 'de' yyyy"/>
                <br /><br />
               </div>
             </div>

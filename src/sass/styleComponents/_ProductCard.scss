@@ -1,0 +1,44 @@
+.btn-increaseProduct , .btn-decreaseProduct{
+    width: 25px;
+    height: 25px;
+    left: 17px;
+    padding: 2px;
+    margin:5px;
+    outline: none;
+    // border: none;
+    // background-color: rgba(182, 113, 32, 1);
+    // border-radius: 20px;
+    color: rgba(64, 34, 7, 1);
+    cursor: $pointer;
+}
+.btn-delete {
+    width: 28px; 
+    height: 30px;
+    background-color: rgba(218, 199, 182, 0);
+    border: none;
+    img {
+        width: 20px;
+        height: 20px;
+        cursor: $pointer;
+    }
+}
+.product-card {
+    width: 15%;
+    height: 45%;
+    display: inline-block;
+    margin: 6px;
+    border: 1px solid grey;
+    vertical-align: text-bottom;
+    cursor: pointer;
+    text-align: center;
+    // @media screen and (min-width:1024px) {
+    //   width: 28%;
+    //   height: 45%;
+    // }
+}
+.width-product {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 5%;
+}

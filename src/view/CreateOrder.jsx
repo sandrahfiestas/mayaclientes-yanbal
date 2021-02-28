@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import StepsOrder from '../components/StepsOrder';
 import iconBack from '../images/icon_back.png';
+import {addOrder} from '../controller/firestore';
+import { Link } from 'react-router-dom';
 
 export class CreateOrder extends Component {
     constructor(props) {
       super(props);
       this.state = {
         step: 1,
-        Order: {
+        order: {
+          name: '',
           amountPay: '',
           amountCharge: '',
           date: new Date(),
@@ -28,28 +31,29 @@ export class CreateOrder extends Component {
       this.setState({ step });
     };
     inputChange = input => e => {
-      const { client } = this.state;
-      client[input] = e.target.value;
-      this.setState({ client: { ...client } });
+      const { order } = this.state;
+      order[input] = e.target.value;
+      this.setState({ order: { ...order } });
     };
     onChange=date=>{
-      const {client} = this.state;
-      client.date = date;
-      this.setState({client: { ...client }});
+      const {order} = this.state;
+      order.date = date;
+      this.setState({order: { ...order }});
     }
    
-    // addNewClient = (client) => {
-    //   addClient(client);
-    // }
+    addNewOrder = (order) => {
+      addOrder(order);
+    }
 
     render() {
-      const {step,Order} = this.state;
+      const {step,order} = this.state;
       return (
     
         <div className="">
           <Navbar expand="lg" variant="light" className="nav-bar">
-            <Container>    
-              <Navbar.Brand href="#">
+            <Container>
+            <Link to="/home">    
+              <Navbar.Brand>
                 <div className="div-header-reg">
                     <div>
                       <img src={iconBack} className="icon-back" alt="icon-back" />
@@ -58,10 +62,11 @@ export class CreateOrder extends Component {
                       <p className="txt-navi">Registro de Pedido</p>
                     </div>
                     <div>
-                      <button className="btn-count"><p className="txt-count">2/4</p></button>
+                      <button className="btn-count"><p className="txt-count">{step}/5</p></button>
                     </div>
                   </div>
               </Navbar.Brand>
+             </Link> 
             </Container>
           </Navbar>
           <StepsOrder
@@ -69,8 +74,9 @@ export class CreateOrder extends Component {
             nextStep={this.nextStep}
             inputChange={this.inputChange}
             step={step}
+            addNewOrder={this.addNewOrder}
             onChange={this.onChange}
-            Order={Order}
+            order={order}
             
         />
         </div>

@@ -1,5 +1,114 @@
+# MAYACLIENTES-YANBAL USANDO react.js
+Maya Clientes, es un app desarrollada en react,sass,bootstrap usando firebase como backend. Tiene como objetivo que los y las consultoras de Yanbal puedan gestionar a sus clientes de manera rápida y sobre todo ordenada. 
+Este producto digital permitirá a las y los consultores registrar a sus clientes para conectar con ellos y  lograr fidelizarlos, mediante sus preferencias e historial de compra de productos. 
+A continuación detallaremos las funcionalidades y secciones de Maya clientes:
+- Recompra: Al registrar los pedidos de sus clientes, MAYA podrá enviarles una alerta cuando estos estén próximos a agotarse, en consecuencia las consultoras podrán tener ventas efectivas y además hará que sus clientes sientan una atención personalizada de parte de su asesora de belleza.
+- Oportunidades: MAYA ayudará haciendo recomendaciones de ofertas orientada en base a las compras anteriores registradas por las y los consultores.
+- Historial de compras: Registro de pedidos donde las y los consultores podrán ir agregando los productos solicitados por sus clientes, esta información alimentará distintas bases de datos que ayudarán a que MAYA. Clientes pueda ofrecer información valiosa y sobre todo a tiempo.
+- Cobranzas: Ayudará a que las y los consultores lleven un control de las deudas de sus clientes, registrando los productos vendidos e inclusive estableciendo fechas de pago.
+
+## Contenido del proyecto.
+Este proyecto tiene tres ramas: gh-pages, main y sabidevelop. **main** Contiene los ultimos cambios listos para desplegar **gh-pages** Es la rama donde corre el proyecto desplegado y **sabidevelop** Contiene las modificaciones que se realizan en el proyecto.
+
+### LOGIN 
+Al iniciar se podrá encontrar la primera vista de login , donde el usuario se registra.
+
+![Login](src/images/readme/Login.jpeg)
+
+### HOME 
+En esta vista la consultora y/o consultor encontrará opciones donde podrá navegar:
+
+![Home](src/images/readme/Home.jpeg)
+
+Opción 1: "Agregar nuevos clientes"
+
+Se podrá registrar:
+- Nombres
+
+![RegistroCliente](src/images/readme/RegistroCliente.jpeg)
+
+- Apellidos
+- Correo electrónico
+- Teléfono
+- Fecha de cumpleaños
+- Preferencias y 
+- Comentarios adicionales. Para en un futuro ofrecerle más productos.
+
+1.1 Si da clic en ¡SÍ! se le pedirá ingresar: 
+
+![FinRegistroCliente](src/images/readme/FinRegistroCliente.jpeg)
+
+
+- Nombre del cliente
+
+![RegistroPedidos](src/images/readme/RegistroPedidos.jpeg)
+
+
+- Monto de pedido
+- Monto a cobrar
+- Fecha de pago
+- Producto al final solo dando clic en el botón "OK" el pedido ya registrará con éxito.
+
+![FinRegistroPedidos](src/images/readme/FinRegistroPedidos.jpeg)
+
+
+
+Opción 2: "A tus clientes le puede gustar"
+
+![Oportunidades](src/images/readme/Oportunidades.png)
+
+
+Muestra una lista de productos a fines al cliente, con el propósito de poder ofrecerlos vía llamada o mensaje de "WhatsApp", el mismo que enviará un mensaje automático con las características del producto directo al número del cliente.
+
+![MensajeWhatsapp](src/images/readme/MensajeWhatsapp.jpeg)
+
+## Prototipo de alta fidelidad
+
+Este es el enlace a figma : https://www.figma.com/file/wFChCLZbyIIy1ltyeEZ8Ht/Maya-Clientes-Yanbal?node-id=120%3A3763
+
+## Prerequisitos
+
+Necesitará las siguientes programas instaladas correctamente en su computadora
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/)
+- [Chrome](https://google.com/chrome/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+## Demo
+Mediante este enlace podrán visualizar la demo de este proyecto desplegada en gh-pages [Demo del proyecto](https://sumaqkuyay.github.io/mayaclientes-yanbal/#/)
+
+## Instalación del proyecto
+Se tienen requisitos especiales,siga estos pasos.
+
+## Forquear el proyecto.
+
+## Clonar el proyecto
+```bash
+git clone https://github.com/sumaqkuyay/mayaclientes-yanbal.git
+```
+### Instalar las dependencias
+Para instalar las dependencias escriba lo siguiente y ejecute
+```bash
+npm install
+```
+#### Ejecutar el proyecto
+Para ejecutar el proyecto escriba lo siguiente y ejecute
+```bash
+npm start
+```
+
+## Despliegue del proyecto
+Para desplegar el proyecto es necesario ubicarse en la rama **main** y ejecutar lo siguiente:
+```bash
+npm run deploy
+```
+
+# Licencia
+[MIT](LICENSE).
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+*** 
 ## Available Scripts
 
 In the project directory, you can run:

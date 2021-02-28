@@ -79,21 +79,33 @@
     justify-content: space-around;
   }
 
+  .preference {
+    width: 300px;
+    align-content: center;
+  }
+
   .btn-preference {
     width: 150px;
     height: 40px;
     background-color: $white;
     border: 1px solid $primary-color;
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-around;
+    font-size:0.9em;
+    margin: 4px;
   }
+
 
 
   .txt-btn-form {
     color: $black;
     font-size: 1.3em;
     margin: 0;
+  }
+
+  .preference {
+    width: 100%;
+    padding-left: 2em;
+    // width: 1000px;
+    margin:0.5em
   }
 
   .icon-next-form {
@@ -104,13 +116,6 @@
     height: 20vh;
     width: 100%;
   }
-
-  .preference {
-    padding-left: 2em;
-    // width: 1000px;
-    margin:0.5em
-  }
-
   .box-des{
     height: 100px;
     text-align: center;
