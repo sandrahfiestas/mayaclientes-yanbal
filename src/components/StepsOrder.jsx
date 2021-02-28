@@ -30,7 +30,6 @@ export class StepsOrder extends Component {
             </button>
           </div>
         </div>
-
         <div className="form-container" hidden={step === 2 ? false : true }>
           <div className="App">
             <p className="txt-info-register">Registra aquí el monto al que estas comprando los productos en este pedido.</p>
