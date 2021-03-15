@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className="div-footer">
+    <div className="container-footer">
     <Link to="/home">
       <div>
         <img src={home} className="icon-home" alt="icon-home" />
