@@ -3,8 +3,10 @@ import logoYanbal from '../images/logo.png';
 
 function Header() {
   return (
-    <div className="div-title">
-      <img src={logoYanbal} className="logo-yanbal" alt="logo" />
+    <div className="container-header">
+      <div className="div-logo-yanbal">
+        <img src={logoYanbal} className="logo-yanbal" alt="logo" />
+      </div>
     </div>
   );
 }
