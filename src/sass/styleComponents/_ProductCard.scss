@@ -1,44 +1,41 @@
 .btn-increaseProduct , .btn-decreaseProduct{
     width: 25px;
     height: 25px;
-    left: 17px;
-    padding: 2px;
-    margin:5px;
-    outline: none;
-    // border: none;
-    // background-color: rgba(182, 113, 32, 1);
-    // border-radius: 20px;
-    color: rgba(64, 34, 7, 1);
-    cursor: $pointer;
+    margin: 0 0.5rem;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    background-color: $white;
+    font-weight: bold;
 }
+
 .btn-delete {
-    width: 28px; 
-    height: 30px;
     background-color: rgba(218, 199, 182, 0);
     border: none;
     img {
-        width: 20px;
-        height: 20px;
-        cursor: $pointer;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
     }
 }
 .product-card {
-    width: 15%;
-    height: 45%;
+    width: 21rem;
     display: inline-block;
     margin: 6px;
-    border: 1px solid grey;
     vertical-align: text-bottom;
-    cursor: pointer;
+    border: 0.1px solid $light-gray;
     text-align: center;
-    // @media screen and (min-width:1024px) {
-    //   width: 28%;
-    //   height: 45%;
-    // }
-}
-.width-product {
-    width: 150px;
-    height: 150px;
-    background-color: white;
     border-radius: 5%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+.width-product {
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+    border: 1px solid $primary-color;
+}
+
+.price {
+    border: 0.1px solid $light-gray;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

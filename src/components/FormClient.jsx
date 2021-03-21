@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import { Link } from 'react-router-dom';
 import btnBack from '../images/btn_back.png';
 import btnNext from '../images/btn_next.png';
 import Calendar from './calendar/Calendar';
+import checkRegister from '../images/icon_check_register.png'
 
 export class FormClient extends Component {
  
   render() {
     const { client, inputChange, addNewClient, nextStep, prevStep, step,onChange, subCats, addPreferences, stateInput, changeState,addPreferenceText,newPreference} = this.props;
+   
+   
     return (
       <>
         <div className="form-container" hidden={step === 1 ? false : true }>
@@ -16,12 +19,12 @@ export class FormClient extends Component {
             <h1 className="mb-5">¿Cómo se llama tu cliente?</h1>
           </div>
           <div className="form-group form-register">
-            <input type="text" className="form-control input-register" placeholder="nombres" name="name" onChange={inputChange('name')} value={client.name} />
-            <input type="text" className="form-control input-register" placeholder="apellidos" name="lastName" onChange={inputChange('lastName')} value={client.lastName}/>
+            <input type="text" className="form-control input-register" placeholder="Nombres" name="name" onChange={inputChange('name')} value={client.name} autoComplete="off"/>
+            <input type="text" className="form-control input-register" placeholder="Apellidos" name="lastName" onChange={inputChange('lastName')} value={client.lastName} autoComplete="off"/>
           </div>
           <br />
           <div className="div-btn">
-            <button className="btn btn-primary btn-form" onClick={nextStep}>
+            <button className="btn-form" onClick={nextStep}>
             <p className="txt-btn-form">Siguiente</p>
             <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
             </button>
@@ -34,18 +37,18 @@ export class FormClient extends Component {
             <h1 className="mb-5">Datos de contacto</h1>
           </div>
           <div className="form-group form-register">
-            <input type="email" className="form-control input-register" placeholder="correo electrónico" name="email" onChange={inputChange('email')} value={client.email} />
-            <input type="number" className="form-control input-register" placeholder="telefono" name="phone" onChange={inputChange('phone')} value={client.phone} />
+            <input type="email" className="form-control input-register" placeholder="Correo electrónico" name="email" onChange={inputChange('email')} value={client.email} autoComplete="off"/>
+            <input type="text" className="form-control input-register" placeholder="Telefono" name="phone" onChange={inputChange('phone')} value={client.phone} autoComplete="off"/>
           </div>
           <div className="div-btn btn-dorwn">
             <div className="">
-              <button className="btn btn-danger btn-form" onClick={prevStep}>
+              <button className="btn-form" onClick={prevStep}>
                   <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
                   <p className="txt-btn-form">Volver</p>
               </button>
             </div>
             <div className="">
-              <button className="btn btn-primary btn-form" onClick={nextStep}>
+              <button className="btn-form" onClick={nextStep}>
                 <p className="txt-btn-form">Siguiente</p>
                 <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
               </button>
@@ -55,8 +58,8 @@ export class FormClient extends Component {
 
         <div className="form-container" hidden={step === 3 ? false : true }>
           <div className="App">
-            <p className="txt-info-register">Agrega su fecha de nacimiento y te recordaremos saludarlos en su cumpleaños, con ideas para llevarles algún obsequio.</p>
-            <h1 className="mb-5">¿Qué día cumpleaños tu cliente?</h1>
+            <p className="txt-info-register">Agrega su fecha de nacimiento y te recordaremos saludarlo(a) en su cumpleaños, con ideas para llevarle algún obsequio.</p>
+            <h1 className="mb-5">¿Qué día cumple años tu cliente?</h1>
           </div>
           <div className="form-group form-register">
             <p>Calendario</p>
@@ -70,13 +73,13 @@ export class FormClient extends Component {
 
           <div className="div-btn btn-dorwn">
               <div className="">
-                  <button className="btn btn-danger btn-form" onClick={prevStep}>
+                  <button className="btn-form" onClick={prevStep}>
                       <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
                       <p className="txt-btn-form">Volver</p>
                   </button>
               </div>
               <div className="">
-                  <button className="btn btn-primary btn-form" onClick={nextStep}>
+                  <button className="btn-form" onClick={nextStep}>
                       <p className="txt-btn-form">Siguiente</p>
                       <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
                   </button>
@@ -88,38 +91,28 @@ export class FormClient extends Component {
           <div className="App">
             <p className="txt-info-register">Elige las preferencias y necesidades de tu cliente y te daremos promociones y sugerencias para ofrecerle nuevos productos.</p>
             <h1 className="mb-5 txt-subtitle">¿Qué tipo de productos prefiere <br></br> tu cliente?</h1>
-            <div className="">
+          </div>
+
+           <div className="div-preferences p-3">
               {client.preferences.map((element,index) => {
                   return (<button className="btn-preference" key={index}>{element}</button>);
               })}
             </div>
-          </div>
-          <div className="div-preferences">
-            {/* <div className="div-preferences"> */}
-                <div className="preference">
-                  {subCats.map((element,index) => {
-                    if(client.preferences.indexOf(element)===-1){
-                      return (<button className="btn-preference" key={index} onClick={()=>addPreferences(element)}>{element}</button>);
-                    }
-                  })}
-                </div>
-                <div className="add-preference">
-                  <button className="btn-preference" onClick={stateInput}>Agregar Preferencias</button>
-                </div>
-                <input type="text" hidden={changeState} className="form-control input-register" placeholder="nombres" name="name" onChange={(e)=>addPreferenceText(e)} value={newPreference}/>
-                <button type="button" hidden={changeState} onClick={()=>addPreferences(newPreference)}>Agregar</button>
-            {/* </div> */}
+
+          <div className="div-addPreferences">
+            <input type="text" className="form-control input-register" placeholder="Ingrese preferencias" name="name" onChange={(e)=>addPreferenceText(e)} value={newPreference} autoComplete="off"/>
+            <button type="button" onClick={()=>addPreferences(newPreference)} className="btn-addPreference p-1">AGREGAR</button>
           </div>
 
           <div className="div-btn btn-dorwn">
               <div className="">
-                  <button className="btn btn-danger btn-form" onClick={prevStep}>
+                  <button className="btn-form" onClick={prevStep}>
                       <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
                       <p className="txt-btn-form">Volver</p>
                   </button>
               </div>
               <div className="">
-                  <button className="btn btn-primary btn-form" onClick={nextStep}>
+                  <button className="btn-form" onClick={nextStep}>
                       <p className="txt-btn-form">Siguiente</p>
                       <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
                   </button>
@@ -133,17 +126,17 @@ export class FormClient extends Component {
             <h1 className="mb-5 text-main">Agregar comentarios o información de cliente</h1>
           </div>
           <div className="form-group">
-            <textarea className="form-control box-des" type="text" placeholder ="Aquí puedes describir mejor a tu cliente" name="description" onChange={inputChange('description')} value={client.description} />
+            <textarea className="form-control box-des p-3 mt-3" type="text" placeholder ="Aquí puedes describir mejor a tu cliente" name="description" onChange={inputChange('description')} value={client.description} />
           </div>
           <div className="div-btn btn-dorwn">
             <div className="">
-                <button className="btn btn-danger btn-form" onClick={prevStep}>
+                <button className="btn-form" onClick={prevStep}>
                     <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
                     <p className="txt-btn-form">Volver</p>
                 </button>
             </div>
             <div className="">
-              <button className="btn btn-primary btn-form" onClick={()=>{addNewClient(client);nextStep();}}>
+              <button className="btn-form" onClick={()=>{addNewClient(client);nextStep();}}>
                   <p className="txt-btn-form">Enviar</p>
                   <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
               </button>
@@ -151,17 +144,23 @@ export class FormClient extends Component {
           </div>
         </div>
 
-        <div className="form-container" hidden={step === 6 ? false : true } >
-          <div className="">
-            <p>Tu cliente se registró satisfactoriamente.</p>
-            <p>¿Deseas ingresar pedidos?.</p>
+        <div className="form-container div-modal-register text-center p-3" hidden={step === 6 ? false : true } >
+
+          <div className="mt-4">
+            <img src={checkRegister} className="icon-check" alt="icon check" />
           </div>
-          <div className="modal-footer">
+
+          <div className="modal-register-text mt-4">
+            <h5>Tu cliente se registró satisfactoriamente.</h5>
+            <p>¿Deseas ingresar pedidos?</p>
+          </div>
+
+          <div className="modal-register-btns mt-4">
             <Link to="/order">
-              <button type="button" className="btn btn-primary">¡SÍ!</button>
+              <button type="button" className="btn-modal">¡Sí!</button>
               </Link>
             <Link to="/home">
-              <button type="button" className="btn btn-primary">¡Después!</button>
+              <button type="button" className="btn-modal">Después</button>
             </Link>
           </div>
         </div>

@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 55vh;
+    height: 50vh;
     border-style: none;
     background: $primary-color;
     line-height:0
@@ -44,7 +44,6 @@
   .form-register {
     margin-top: 15px;
     padding: 0em 2.5em;
-    // display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -56,6 +55,11 @@
     border-radius: 5px;
     color: $text-color;
     font-size: 1.2em;
+
+    &:focus {
+      border-color: $primary-color-light;
+      box-shadow: 0 0 5px $primary-color;
+    }
   }
 
   .div-btn {
@@ -69,20 +73,25 @@
     align-items: center;
   }
 
-  .btn-form {
-    width: 180px;
-    height: 57px;
-    background-color: $white;
-    border: 1px solid $primary-color;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
   .preference {
     width: 300px;
     align-content: center;
   }
+
+  .div-addPreferences {
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-addPreference {
+    height: 40px;
+    color: $white;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+  }
+
 
   .btn-preference {
     width: 150px;
@@ -91,20 +100,12 @@
     border: 1px solid $primary-color;
     font-size:0.9em;
     margin: 4px;
-  }
-
-
-
-  .txt-btn-form {
-    color: $black;
-    font-size: 1.3em;
-    margin: 0;
+    border-radius: 5px;
   }
 
   .preference {
     width: 100%;
     padding-left: 2em;
-    // width: 1000px;
     margin:0.5em
   }
 
@@ -115,14 +116,73 @@
   .div-preferences {
     height: 20vh;
     width: 100%;
+    overflow: auto;
   }
   .box-des{
-    height: 100px;
     text-align: center;
-   // background-color: yellow;
     overflow-wrap: break-word;
 
   }
   .text-main{
     text-align: center;
+  }
+
+  .div-modal-register {
+    margin-top: 2rem;
+  }
+  
+  .modal-register-text {
+    line-height: 40px;
+    h5 {
+      color: $primary-color;
+    }
+  
+    p {
+      font-weight: bold;
+    }
+  }
+
+  .modal-register-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-modal {
+    color:$white;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    background-color: $primary-color;
+    border-radius: 5px;
+    border: 1px solid $primary-color;
+    
+    &:hover {
+      color: $primary-color;
+      background-color: $primary-color-light;
+    }
+
+    &:focus {
+        outline: none;
+    }
+  }
+
+  .txt-client-detail {
+    color: $primary-color;
+    font-weight: bold;
+    padding: 0.8rem 0.5rem
+  }
+
+  .card-detail-order {
+    display: flex;
+    align-items: center;
+    
+    h6 {
+      color: $primary-color;
+      padding: 0.5rem;
+    }
+    img {
+      width: 50px;
+      height: 70px;
+    }
+
   }

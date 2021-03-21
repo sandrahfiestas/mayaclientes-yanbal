@@ -4,8 +4,8 @@ import btnBack from '../images/btn_back.png';
 import btnNext from '../images/btn_next.png';
 import CalendarOrder from './calendar/CalendarOrder';
 import ProductCard from './ProductCard';
-import whatsapp from '../images/whatsapp.png';
-import llamada from '../images/llamada.png';
+import iconDelete from '../images/icon_delete.png';
+import checkRegister from '../images/icon_check_register.png'
 
 
 
@@ -16,38 +16,42 @@ export class StepsOrder extends Component {
       <>
        <div className="form-container" hidden={step === 1 ? false : true }>
           <div className="div-cards">
-                <p className="txt-card">Ingresa el nombre del cliente.</p>
-                <hr/>
-                <div className="form-group form-register">
-                <input type="text" className="form-control input-register" placeholder="Ingresar nombre del cliente" name="name" onChange={inputChange('name')} value={order.name} />
+            <p className="txt-card">Ingresa el nombre de tu cliente</p>
+            <hr/>
+            <div className="form-group form-register">
+              <input type="text" className="form-control input-register" placeholder="Lourdes Figueroa" name="name" onChange={inputChange('name')} value={order.name} />
             </div>
           </div>
           <br />
           <div className="div-btn">
-            <button className="btn btn-primary btn-form" onClick={nextStep}>
+            <button className="btn-form" onClick={nextStep}>
             <p className="txt-btn-form">Siguiente</p>
             <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
             </button>
           </div>
         </div>
+
         <div className="form-container" hidden={step === 2 ? false : true }>
           <div className="App">
             <p className="txt-info-register">Registra aquí el monto al que estas comprando los productos en este pedido.</p>
             <h1 className="mb-5">Ingresar monto del pedido</h1>
           </div>
           <div className="form-group form-register">
-          <input type="text" className="form-control input-register" placeholder="Ingresar Monto del pedido" name="amountPay" onChange={inputChange('amountPay')} value={order.amountPay} />
+          <div className="d-flex align-items-center">
+          S/.
+          <input type="text" className="form-control input-register" placeholder="Monto del pedido" name="amountPay" onChange={inputChange('amountPay')} value={order.amountPay} />
+          </div>
           </div>
           <br />
           <div className="div-btn btn-dorwn">
-            <div className="">
-              <button className="btn btn-danger btn-form" onClick={prevStep}>
+            <div>
+              <button className="btn-form" onClick={prevStep}>
                   <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
                   <p className="txt-btn-form">Volver</p>
               </button>
             </div>
             <div className="">
-              <button className="btn btn-primary btn-form" onClick={nextStep}>
+              <button className="btn-form" onClick={nextStep}>
                 <p className="txt-btn-form">Siguiente</p>
                 <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
               </button>
@@ -61,17 +65,20 @@ export class StepsOrder extends Component {
             <h1 className="mb-5">Ingresa monto a cobrar</h1>
           </div>
           <div className="form-group form-register">
-            <input type="email" className="form-control input-register" placeholder="Ingresar monto a cobrar" name="amountCharge" onChange={inputChange('amountCharge')} value={order.amountCharge} />
+            <div className="d-flex align-items-center">
+               S/.
+              <input type="text" className="form-control input-register" placeholder="Monto a cobrar" name="amountCharge" onChange={inputChange('amountCharge')} value={order.amountCharge} />
+            </div>
           </div>
           <div className="div-btn btn-dorwn">
-            <div className="">
-              <button className="btn btn-danger btn-form" onClick={prevStep}>
+            <div>
+              <button className="btn-form" onClick={prevStep}>
                   <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
                   <p className="txt-btn-form">Volver</p>
               </button>
             </div>
             <div className="">
-              <button className="btn btn-primary btn-form" onClick={nextStep}>
+              <button className="btn-form" onClick={nextStep}>
                 <p className="txt-btn-form">Siguiente</p>
                 <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
               </button>
@@ -81,7 +88,7 @@ export class StepsOrder extends Component {
 
         <div className="form-container" hidden={step ===  4 ? false : true }>
           <div className="App">
-            <p className="txt-info-register">Ingresar fecha máxima,en la que estas acordando el pago de este pedido con tu cliente.</p>
+            <p className="txt-info-register">Ingresa la fecha máxima,en la que estas acordando el pago de este pedido con tu cliente.</p>
             <h1 className="mb-5">Ingresa fecha de pago</h1>
           </div>
           <div className="form-group form-register">
@@ -94,14 +101,14 @@ export class StepsOrder extends Component {
             </div>
            </div>
           <div className="div-btn btn-dorwn">
-            <div className="">
-              <button className="btn btn-danger btn-form" onClick={prevStep}>
+            <div>
+              <button className="btn-form" onClick={prevStep}>
                   <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
                   <p className="txt-btn-form">Volver</p>
               </button>
             </div>
             <div className="">
-              <button className="btn btn-primary btn-form" onClick={nextStep}>
+              <button className="btn-form" onClick={nextStep}>
                 <p className="txt-btn-form">Siguiente</p>
                 <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
               </button>
@@ -111,89 +118,93 @@ export class StepsOrder extends Component {
 
         <div className="form-container" hidden={step === 5 ? false : true }>
           <div className="div-cards">
-            <p className="txt-card">Ingresa el nombre o código de producto</p>
+            <p className="txt-card">Ingresa el nombre o código de producto:</p>
             <hr/>
-            <div className="form-group form-register">
-            <ProductCard/>
-
+            <div className="form-group form-register d-flex">
+             <ProductCard/>
             </div>
           </div>
           <br />
           <div className="div-btn">
-          <button className="btn btn-danger btn-form" onClick={prevStep}>
+          <button className="btn-form" onClick={prevStep}>
               <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
               <p className="txt-btn-form">Volver</p>
               </button>
-            <button className="btn btn-primary btn-form" onClick={nextStep}>
+            <button className="btn-form" onClick={nextStep}>
             <p className="txt-btn-form">Siguiente</p>
             <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
             </button>
           </div>
         </div>
 
-        <div  className="container" hidden={step === 6 ? false : true }>
+        <div  className="form-container" hidden={step === 6 ? false : true }>
           <div>
-            <hr/>
-            <p className="txt-card">Detalle de pedido.</p>
-            <hr/>
-            <br/>
+            <p className="txt-card">Detalle de pedido</p>
           </div>
-          <p className="text-center">Cliente</p>
           <div className="form-group form-register">
-            <input type="email" className="form-control input-register" placeholder="Natalia Gordillo" name="email" onChange={inputChange('email')} />
+            <div className="d-flex">
+              <p className="txt-client-detail">Cliente:</p>
+              <input type="text" className="form-control input-register" placeholder="Lourdes Figueroa" name="email" onChange={inputChange('email')} />
+            </div>
           </div>
-          <div>
-            <div className="list-group">
-              <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
-                <div className="d-flex w-100 justify-content-between">
-                  <small className="text-muted">1</small>
-                  <img src="" alt=""/>
-                  <p className="mb-1">Elixir de ojos</p>
-                </div>
-              </a>
-              <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
-                <div className="d-flex w-100 justify-content-between">
-                <small className="text-muted">2</small>
-                <img src="" alt=""/>
-                <p className="mb-1">Total block</p>
-                </div>
-              </a>
-              <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
-                <div className="d-flex w-100 justify-content-between">
-                <small className="text-muted">3</small>
-                <img src="" alt=""/>
-                <p className="mb-1">Ccori</p>
-                </div>
-              </a>
+            <div className="card-detail-order px-2 py-3 border">
+              <h6>1</h6>
+              <img src="https://user-images.githubusercontent.com/60890508/96071205-3f383280-0e67-11eb-844e-e1f5d65e11b2.jpg" alt="Energia Vital" className="img-product-oder"/>
+              <div className="d-flex flex-column text-center w-100 align-items-center">
+                <span>Energia vital limpiador</span>
+                <p className="price px-2">23415</p>
+              </div>
               <div>
-                <a><p>Monto de pedido</p><p>S/170.00</p></a>
-                <p>Monto a cobrar</p>S/138.00<p></p>
+                <button className="btn-delete" type="button">
+                  <img src={iconDelete} alt="eliminar" />
+                </button>
               </div>
             </div>
-          </div>
-          <div className="div-btn btn-dorwn">
-            <div className="">
-              <button className="btn btn-danger btn-form" onClick={prevStep}>
-                  <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
-                  <p className="txt-btn-form">Volver</p>
-              </button>
+            <div className="card-detail-order px-2 py-3 border">
+              <h6>2</h6>
+              <img src="https://user-images.githubusercontent.com/60890508/96071187-33e50700-0e67-11eb-9ab7-2cbdafdabd00.jpg" alt="Energia Vital" className="img-product-oder"/>
+              <div className="d-flex flex-column text-center w-100 align-items-center">
+                <span>Elixir de ojos</span>
+                <p className="price px-2">24345</p>
+              </div>
+              <div>
+                <button className="btn-delete" type="button">
+                  <img src={iconDelete} alt="eliminar" />
+                </button>
+              </div>
             </div>
-            <div className="">
-              <button className="btn btn-primary btn-form" onClick={()=>{addNewOrder(order);nextStep();}}>
-                <p className="txt-btn-form">Registrar</p>
-                <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
-              </button>
+            <div>
+              <div className="d-flex justify-content-between border py-2 px-3">
+                <p>Monto de pedido:</p>
+                <p className="font-weight-bold">S/ 114.00</p>
+              </div>
+              <div className="d-flex justify-content-between border py-2 px-3">
+                <p>Monto a cobrar:</p>
+                <p className="font-weight-bold">S/ 110.00</p>
+              </div>
             </div>
-          </div>
-        </div>
+            <div className="div-btn">
+                <button className="btn-form" onClick={prevStep}>
+                    <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
+                    <p className="txt-btn-form">Volver</p>
+                </button>
+                <button className="btn-form" onClick={()=>{addNewOrder(order);nextStep();}}>
+                  <p className="txt-btn-form">Registrar</p>
+                  <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
+                </button>
+            </div>
+        </div>        
 
-        <div className="form-container" hidden={step === 7 ? false : true } >
-          <div className="">
-            <p>Tu Pedido se registró satisfactoriamente.</p>
+        <div className="form-container div-modal-register text-center p-3" hidden={step === 7 ? false : true } >
+           <div className="mt-4">
+              <img src={checkRegister} className="icon-check" alt="icon check" />
+          </div> 
+          <div className="modal-register-text mt-4">
+            <h5>El pedido de tu cliente se registró satisfactoriamente</h5>
           </div>
-          <div className="modal-footer">
+          <div className="modal-register-btns mt-4">
             <Link to="/home">
-              <button type="button" className="btn btn-primary">¡OK!</button>
+              <button type="button" className="btn-modal">¡OK!</button>
             </Link>
           </div>
         </div>

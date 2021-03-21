@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import book from '../images/icon_book_on.png';
 import next from '../images/icon_next_on.png';
-// import nextOff from '../images/icon_next_off.png';
 import headerOn from '../images/icon_heart_on.png';
 import productsOn from '../images/icon_products_on.png';
 import moneyOn from '../images/icon_money_on.png';
@@ -10,41 +9,15 @@ import birthdayOn from '../images/icon_birthday_on.png';
 import { addProducts } from '../controller/firestore';
 
 function Welcome() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch('../products.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    }).then((response) => {
-      try {
-        return response.json();
-      } catch (e) {
-        return Promise.reject(new Error('No se encontraron los datos'));
-      }
-    })
-      .then((datos) => {
-        setData(datos);
-      })
-      .catch(() => console.log('No se encontró el archivo'));
-  }, []);
-
-  // const handleSend = (e) => {
-  //   e.preventDefault();
-  //   data.forEach((element) => {
-  //     console.log('acá');
-  //     addProducts(element);
-  //   });
-  // };
-
   return (
-    <div className="div-welcome">
+    <div className="container-component">
 
-      {/* <button type="button" onClick={handleSend}>Send</button> */}
-      <h5 className="welcome-hi">¡Hola, ...!</h5>
-      <p className="txt-p space-p txt-color-normal">Mira todo lo que tenemos para ti hoy:</p>
-
+      <div className="div-hi">
+        <h5 className="welcome-hi">¡Hola!</h5>
+        <p className="txt-p space-p txt-color-normal">Mira todo lo que tenemos para ti hoy:</p>
+      </div>
+      
+      <div className="btn-welcome">
       <Link to="/client">
         <button type="button" className="btn-options">
           <img src={book} className="icon-book" alt="icon-book" />
@@ -56,25 +29,27 @@ function Welcome() {
         </button>
       </Link>
 
-      <Link to="/oportunity">
-      <button type="button" className="btn-options">
-        <img src={headerOn} className="icon_heart_off" alt="icon_heart_off" />
-        <div className="div-txt">
-          <p className="txt-title txt-color-on">A tus clientes les puede gustar</p>
-          <p className="txt-p txt-color-normal">Te dejamos algunas ideas de productos y promociones que les pueden interesar</p>
-        </div>
-        <img src={next} className="icon_next" alt="icon_next" />
-      </button>
+      <Link to="/order">
+        <button type="button" className="btn-options">
+          <img src={productsOn} className="icon_products_off" alt="icon_products_off" />
+          <div className="div-txt">
+            <p className="txt-title txt-color-on">Registra pedidos para tus clientes!</p>
+            <p className="txt-p txt-color-normal">Podrás fidelizar a tus clientes tomando nota de todos sus requerimientos</p>
+          </div>
+          <img src={next} className="icon_next" alt="icon_next" />
+        </button>
       </Link>
 
-      <button type="button" className="btn-options">
-        <img src={productsOn} className="icon_products_off" alt="icon_products_off" />
-        <div className="div-txt">
-          <p className="txt-title txt-color-on">Se les están acabando  estos productos!</p>
-          <p className="txt-p txt-color-normal">Hace tiempo que tus clientes te compraron estos productos.Es tiempo de reponerlos!</p>
-        </div>
-        <img src={next} className="icon_next" alt="icon_next" />
-      </button>
+      <Link to="/oportunity">
+        <button type="button" className="btn-options">
+          <img src={headerOn} className="icon_heart_off" alt="icon_heart_off" />
+          <div className="div-txt">
+            <p className="txt-title txt-color-on">A tus clientes les puede gustar</p>
+            <p className="txt-p txt-color-normal">Te dejamos algunas ideas de productos y promociones que les pueden interesar</p>
+          </div>
+          <img src={next} className="icon_next" alt="icon_next" />
+        </button>
+      </Link>
 
       <button type="button" className="btn-options">
         <img src={moneyOn} className="icon_money_on" alt="icon_money_off" />
@@ -88,10 +63,12 @@ function Welcome() {
       <button type="button" className="btn-options">
         <img src={birthdayOn} className="icon_birthday_off" alt="icon_birthday_off" />
         <div className="div-txt">
-          <p className="txt-title txt-color-on">Hoy es cumpleaños de algunos clientes. Engríelos</p>
+          <p className="txt-title txt-color-on">Hoy es cumpleaños de algunos clientes. ¡Engríelos!</p>
         </div>
         <img src={next} className="icon_next" alt="icon_next" />
       </button>
+      </div>
+
     </div>
   );
 }

@@ -74,11 +74,6 @@ export class CreateClient extends Component {
     this.setState({client: { ...client }});
   }
   
-  // mostrarFecha = date=>{
-  //   const options = {weekday: 'short', year: 'numeric', month: 'long', day: 'numeric'};
-  //   alert(date.toLocaleDateString('es-ES', options));
-  // }
-
   nextStep = () => {
     let { step } = this.state;
     step = step + 1;
@@ -102,7 +97,7 @@ export class CreateClient extends Component {
         <div className="">
           <Navbar expand="lg" variant="light" className="nav-bar">
             <Container>  
-            <Link to="/home">
+            <Link to="/home"> 
               <Navbar.Brand>
                 <div className="div-header-reg">
                     <div>
@@ -112,7 +107,7 @@ export class CreateClient extends Component {
                       <p className="txt-navi">Registro de Cliente</p>
                     </div>
                     <div>
-                    <button className="btn-count"><p className="txt-count">{step}/7</p></button>
+                    <button className="btn-count"><p className="txt-count">{step}/6</p></button>
                     </div>
                   </div>
               </Navbar.Brand>

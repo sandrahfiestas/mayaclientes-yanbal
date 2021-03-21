@@ -25,17 +25,24 @@ $white:#ffff;
 .btn-form {
     width: 180px;
     height: 57px;
-    background-color: $white;
-    border: 1px solid $primary-color;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: $white;
+    border-radius: 5px;
+    border: 1px solid $primary-color;
+    
+    &:hover {
+        background-color: $primary-color-light;
+        color: $primary-color;
+    }
+
+    &:focus {
+        outline: none;
+    }
   }
 
-
-
   .txt-btn-form {
-    color: $black;
     font-size: 1.3em;
     margin: 0;
   }
