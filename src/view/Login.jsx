@@ -30,11 +30,7 @@ const Login = () => {
 
   const sendData = (event) => {
     event.preventDefault();
-    
-    if (data.email === 'example@mail.com' && data.password === '123456') {
       history.push('/home')
-    }
-    console.log(data.email, data.password);
   }
 
 
@@ -61,9 +57,7 @@ const Login = () => {
               autoComplete="off" 
               required 
               onChange={handleInputChange}/>
-            <p id="alert" className="alert-form hidden">*Campos vacios o incorrectos <br/>
-               Intente ingresando el ejemplo.</p>
-            <button className="btn btn-primary btn-login" type="submit">Ingresar</button>
+            <button className="btn-login" type="submit">Ingresar</button>
           </form>
       </div>
     </div>
