@@ -36,7 +36,7 @@ function Dashboard() {
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center">
               <a 
-                href="https://wa.me/51935156593/?text=%C2%A1Hola Natalia! Creo que estos productos podrían interesarte y se adecuarán perfecto a tus preferencias! Y además están con un precio increíble!
+                href="https://wa.me/51935156593/?text=%C2%A1Hola Lourdes! Creo que estos productos podrían interesarte y se adecuarán perfecto a tus preferencias! Y además están con un precio increíble!
                     - Limpiador Energía Vital - S/ 35.50
                     - Elixir de vida ojos - S/ 78.50
                     Coméntame si estás interesada! Feliz de asesorarte 🧡%0A%0A%0A%0A" 
@@ -68,7 +68,7 @@ function Dashboard() {
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center">
               <a 
-                href="https://wa.me/51935156593/?text=%C2%A1Hola Natalia! Creo que estos productos podrían interesarte y se adecuarán perfecto a tus preferencias! Y además están con un precio increíble!
+                href="https://wa.me/51935156593/?text=%C2%A1Hola Clarissa! Creo que estos productos podrían interesarte y se adecuarán perfecto a tus preferencias! Y además están con un precio increíble!
                     - BB Cream Sentiva - S/ 67
                     - Energia Vital Gel - S/ 78
                     - Demaquillador Doble Fase - S/ 46
@@ -97,7 +97,7 @@ function Dashboard() {
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center">
               <a 
-                href="https://wa.me/51935156593/?text=%C2%A1Hola Natalia! Creo que estos productos podrían interesarte y se adecuarán perfecto a tus preferencias! Y además están con un precio increíble!
+                href="https://wa.me/51935156593/?text=%C2%A1Hola Adrián! Creo que estos productos podrían interesarte y se adecuarán perfecto a tus preferencias! Y además están con un precio increíble!
                     - Mascarilla Facial Sentiva - S/ 60
                     - Crema Concha de Nácar - S/ 27
                     Coméntame si estás interesado! Feliz de asesorarte 🧡%0A%0A%0A%0A" 
