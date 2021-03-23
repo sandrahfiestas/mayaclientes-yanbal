@@ -93,16 +93,17 @@ export class FormClient extends Component {
             <h1 className="mb-5 txt-subtitle">¿Qué tipo de productos prefiere <br></br> tu cliente?</h1>
           </div>
 
-           <div className="div-preferences p-3">
+          <div className="div-addPreferences px-3">
+            <input type="text" className="form-control input-register" placeholder="Ingrese preferencias" name="name" onChange={(e)=>addPreferenceText(e)} value={newPreference} autoComplete="off"/>
+            <button type="button" onClick={()=>addPreferences(newPreference)} className="btn-addPreference p-1">AGREGAR</button>
+          </div>
+
+           <div className="div-preferences p-3 text-center">
               {client.preferences.map((element,index) => {
                   return (<button className="btn-preference" key={index}>{element}</button>);
               })}
             </div>
 
-          <div className="div-addPreferences">
-            <input type="text" className="form-control input-register" placeholder="Ingrese preferencias" name="name" onChange={(e)=>addPreferenceText(e)} value={newPreference} autoComplete="off"/>
-            <button type="button" onClick={()=>addPreferences(newPreference)} className="btn-addPreference p-1">AGREGAR</button>
-          </div>
 
           <div className="div-btn btn-dorwn">
               <div className="">
