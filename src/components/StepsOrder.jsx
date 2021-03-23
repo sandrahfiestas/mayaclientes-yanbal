@@ -137,11 +137,11 @@ export class StepsOrder extends Component {
           </div>
         </div>
 
-        <div  className="form-container" hidden={step === 6 ? false : true }>
+        <div  className="form-container px-3" hidden={step === 6 ? false : true }>
           <div>
             <p className="txt-card">Detalle de pedido</p>
           </div>
-          <div className="form-group form-register">
+          <div className="form-group">
             <div className="d-flex">
               <p className="txt-client-detail">Cliente:</p>
               <input type="text" className="form-control input-register" placeholder="Lourdes Figueroa" name="email" onChange={inputChange('email')} />
