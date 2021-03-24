@@ -62,7 +62,7 @@ function Dashboard() {
                 <p className="m-2">S/78</p>
               </div>
               <div className="w-100">
-                <img src='https://user-images.githubusercontent.com/60890508/96071139-1f087380-0e67-11eb-92ed-5a20b5ab383e.jpg'  className="product-call" />
+                <img src='https://user-images.githubusercontent.com/60890508/96071161-2891db80-0e67-11eb-8497-47b032889bb5.jpg'  className="product-call" />
                 <p className="m-2">S/46</p>
               </div>
             </div>

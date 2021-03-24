@@ -94,7 +94,7 @@ export class CreateClient extends Component {
   render() {
       const { client, step, subCats, changeState, newPreference} = this.state;
     return (
-        <div className="">
+        <div className="base">
           <Navbar expand="lg" variant="light" className="nav-bar">
             <Container>  
             <Link to="/home"> 

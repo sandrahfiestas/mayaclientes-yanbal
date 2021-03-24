@@ -88,7 +88,7 @@ export class StepsOrder extends Component {
 
         <div className="form-container" hidden={step ===  4 ? false : true }>
           <div className="App">
-            <p className="txt-info-register">Ingresa la fecha máxima,en la que estas acordando el pago de este pedido con tu cliente.</p>
+            <p className="txt-info-register">Ingresa la fecha en la que estas acordando el pago de este pedido con tu cliente.</p>
             <h1 className="mb-5">Ingresa fecha de pago</h1>
           </div>
           <div className="form-group form-register">
@@ -138,10 +138,11 @@ export class StepsOrder extends Component {
         </div>
 
         <div  className="form-container" hidden={step === 6 ? false : true }>
+          <div className="px-2">
           <div>
             <p className="txt-card">Detalle de pedido</p>
           </div>
-          <div className="form-group form-register">
+          <div className="form-group">
             <div className="d-flex">
               <p className="txt-client-detail">Cliente:</p>
               <input type="text" className="form-control input-register" placeholder="Lourdes Figueroa" name="email" onChange={inputChange('email')} />
@@ -183,6 +184,7 @@ export class StepsOrder extends Component {
                 <p className="font-weight-bold">S/ 110.00</p>
               </div>
             </div>
+            </div>
             <div className="div-btn">
                 <button className="btn-form" onClick={prevStep}>
                     <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
@@ -193,6 +195,7 @@ export class StepsOrder extends Component {
                   <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
                 </button>
             </div>
+ 
         </div>        
 
         <div className="form-container div-modal-register text-center p-3" hidden={step === 7 ? false : true } >
