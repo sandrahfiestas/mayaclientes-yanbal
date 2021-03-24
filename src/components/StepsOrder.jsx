@@ -137,7 +137,8 @@ export class StepsOrder extends Component {
           </div>
         </div>
 
-        <div  className="form-container px-3" hidden={step === 6 ? false : true }>
+        <div  className="form-container" hidden={step === 6 ? false : true }>
+          <div className="px-2">
           <div>
             <p className="txt-card">Detalle de pedido</p>
           </div>
@@ -183,6 +184,7 @@ export class StepsOrder extends Component {
                 <p className="font-weight-bold">S/ 110.00</p>
               </div>
             </div>
+            </div>
             <div className="div-btn">
                 <button className="btn-form" onClick={prevStep}>
                     <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
@@ -193,6 +195,7 @@ export class StepsOrder extends Component {
                   <img src={btnNext} className="icon-next-form" alt="icon-next-form" />
                 </button>
             </div>
+ 
         </div>        
 
         <div className="form-container div-modal-register text-center p-3" hidden={step === 7 ? false : true } >
