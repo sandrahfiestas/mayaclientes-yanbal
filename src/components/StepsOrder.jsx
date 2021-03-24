@@ -88,7 +88,7 @@ export class StepsOrder extends Component {
 
         <div className="form-container" hidden={step ===  4 ? false : true }>
           <div className="App">
-            <p className="txt-info-register">Ingresa la fecha máxima,en la que estas acordando el pago de este pedido con tu cliente.</p>
+            <p className="txt-info-register">Ingresa la fecha en la que estas acordando el pago de este pedido con tu cliente.</p>
             <h1 className="mb-5">Ingresa fecha de pago</h1>
           </div>
           <div className="form-group form-register">

@@ -58,7 +58,7 @@ export class FormClient extends Component {
 
         <div className="form-container" hidden={step === 3 ? false : true }>
           <div className="App">
-            <p className="txt-info-register">Agrega su fecha de nacimiento y te recordaremos saludarlo(a) en su cumpleaños, con ideas para llevarle algún obsequio.</p>
+            <p className="txt-info-register">Agrega su fecha de nacimiento y te recordaremos saludarlo(a) con ideas para llevarle algún obsequio.</p>
             <h1 className="mb-5">¿Qué día cumple años tu cliente?</h1>
           </div>
           <div className="form-group form-register">
@@ -89,8 +89,8 @@ export class FormClient extends Component {
 
         <div className="form-container" hidden={step === 4 ? false : true }>
           <div className="App">
-            <p className="txt-info-register">Elige las preferencias y necesidades de tu cliente y te daremos promociones y sugerencias para ofrecerle nuevos productos.</p>
-            <h1 className="mb-5 txt-subtitle">¿Qué tipo de productos prefiere <br></br> tu cliente?</h1>
+            <p className="txt-info-register">Elige las preferencias de tu cliente y te daremos promociones para ofrecerle nuevos productos.</p>
+            <h1 className="mb-5 txt-subtitle">¿Qué productos prefiere <br></br> tu cliente?</h1>
           </div>
 
           <div className="div-addPreferences px-3">
@@ -124,7 +124,7 @@ export class FormClient extends Component {
         <div className="form-container" hidden={step === 5 ? false : true } >
           <div className="App">
             <p className="txt-info-register">Si deseas, agrega más información de tu cliente que te servirá para asesorarlo mejor. Por ejemplo: Datos sobre su familia, etc</p>
-            <h1 className="mb-5 text-main">Agregar comentarios o información de cliente</h1>
+            <h1 className="mb-5 text-main">Agregar comentarios o información de tu cliente</h1>
           </div>
           <div className="form-group">
             <textarea className="form-control box-des p-3 mt-3" type="text" placeholder ="Aquí puedes describir mejor a tu cliente" name="description" onChange={inputChange('description')} value={client.description} />
