@@ -29,7 +29,7 @@ Opción 1: "Agregar nuevos clientes"
 Se podrá registrar:
 - Nombres
 
-![RegistroCliente](src/images/readme/RegistroCliente.jpg)
+![RegistroCliente](src/images/readme/RegisterClient.jpg)
 
 - Apellidos
 - Correo electrónico
@@ -40,7 +40,7 @@ Se podrá registrar:
 
 Registrando así, al cliente con exito. Dando una opción adicional de ingresar pedidos en el momento.
 
-![FinRegistroCliente](src/images/readme/FinRegistroCliente.jpg)
+![FinRegistroCliente](src/images/readme/RegisterClient_Ok.jpg)
 
 
 
@@ -49,7 +49,7 @@ Opción 2: "Registra pedidos para tus clientes!"
 Se podrá registrar:
 - Nombre del cliente
 
-![RegistroPedidos](src/images/readme/RegistroPedidos.jpg)
+![RegistroPedidos](src/images/readme/RegisterOrder.jpg)
 
 
 - Monto de pedido
@@ -59,7 +59,7 @@ Se podrá registrar:
   
   Registrando así, el pedido con éxito.
 
-![FinRegistroPedidos](src/images/readme/FinRegistroPedidos.jpg)
+![FinRegistroPedidos](src/images/readme/RegisterOrder_Ok.jpg)
 
 
 
@@ -67,13 +67,8 @@ Opción 3: "A tus clientes les puede gustar"
 
 Muestra una lista de productos a fines al cliente, con el propósito de poder ofrecerlos.
 
-![Oportunidades](src/images/readme/Oportunidades.jpg)
+![Oportunidades](src/images/readme/Opportunities.jpg)
 
 Los productos son ofrecidos vía llamada o mensaje de "WhatsApp", el mismo que enviará un mensaje automático con las características del producto, directamente al número del cliente.
 
-![MensajeWhatsapp](src/images/readme/MensajeWhatsapp.jpg)
-
-
-## Prototipo de alta fidelidad
-
-Enlace a figma : https://www.figma.com/file/wFChCLZbyIIy1ltyeEZ8Ht/Maya-Clientes-Yanbal?node-id=120%3A3763
+![MensajeWhatsapp](src/images/readme/MessageWhatsapp.jpg)
